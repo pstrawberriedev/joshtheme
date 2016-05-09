@@ -1,12 +1,12 @@
 # Josh.care Theme
-### Using the [Casper Theme](http -://github.com/tryghost/ghost/) base
+Using the [Casper Theme](http -://github.com/tryghost/ghost/) base
 
-## LESS compiled independently using [less-watch-compiler](https://github.com/jonycheung/deadsimple-less-watch-compiler)
+##### LESS compiled independently using [less-watch-compiler](https://github.com/jonycheung/deadsimple-less-watch-compiler)
 ```
 npm install -g less-watch-compiler
 ```
 
-## Copyright & License: Applies to [Casper Theme](http://github.com/tryghost/ghost/), as well as this theme (Josh.care Theme)
+##### Copyright & License: Applies to [Casper Theme](http://github.com/tryghost/ghost/), as well as this theme (Josh.care Theme)
 
 
 Copyright (c) 2013-2016 Ghost Foundation - Released under the MIT License.
