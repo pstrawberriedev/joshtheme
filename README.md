@@ -8,7 +8,7 @@ less-watch-compiler joshtheme/assets/less joshtheme/assets/css styles.less
 ```
 
 
-##### Copyright & License: Applies to [Casper Theme](http://github.com/tryghost/ghost/), as well as this theme (Josh.care Theme)
+##### Copyright & License: Applies to [Casper Theme](http://github.com/tryghost/ghost/), as well as this theme ([Josh.care Theme](https://github.com/pstrawberriedev/joshtheme))
 
 
 Casper Theme Copyright (c) 2013-2016 Ghost Foundation - Released under the MIT License.
