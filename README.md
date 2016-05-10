@@ -4,7 +4,9 @@ A [Ghost Blog](http://github.com/tryghost/ghost/) theme for my site using the [C
 ##### LESS compiled independently using [less-watch-compiler](https://github.com/jonycheung/deadsimple-less-watch-compiler)
 ```
 npm install -g less-watch-compiler
+less-watch-compiler joshtheme/assets/less joshtheme/assets/css styles.less
 ```
+
 
 ##### Copyright & License: Applies to [Casper Theme](http://github.com/tryghost/ghost/), as well as this theme (Josh.care Theme)
 
