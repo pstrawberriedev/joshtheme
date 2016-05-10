@@ -9,7 +9,8 @@ npm install -g less-watch-compiler
 ##### Copyright & License: Applies to [Casper Theme](http://github.com/tryghost/ghost/), as well as this theme (Josh.care Theme)
 
 
-Copyright (c) 2013-2016 Ghost Foundation - Released under the MIT License.
+Casper Theme Copyright (c) 2013-2016 Ghost Foundation - Released under the MIT License.
+Josh.care Theme Copyright (c) 2016 Josh.care - Released under the MIT License.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
