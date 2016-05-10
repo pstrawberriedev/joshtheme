@@ -1,5 +1,5 @@
 # Josh.care Theme
-Using the [Casper Theme](http -://github.com/tryghost/ghost/) base
+Using the [Casper Theme](http://github.com/tryghost/ghost/) base
 
 ##### LESS compiled independently using [less-watch-compiler](https://github.com/jonycheung/deadsimple-less-watch-compiler)
 ```
