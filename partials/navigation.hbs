@@ -10,7 +10,7 @@
       <a href="{{url absolute="true"}}" class="brand-logo">{{meta_title}}</a>
     </div>
   </nav>
-  <ul role="menubar" aria-hidden="true">
+  <ul id="mobile-nav" role="menubar" aria-hidden="true">
     {{#foreach navigation}}
       <li class="{{slug}}{{#if current}} active{{/if}}" role="menuitem">
         <a href="{{url absolute="true"}}">{{label}}</a>

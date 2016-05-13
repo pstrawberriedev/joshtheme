@@ -44,14 +44,16 @@ nav[role=main] {
     }
 }
 
-ul[role=menubar] {
+#mobile-nav {
   position:fixed;
-  display:none;
+  display:block;
+  .opacity(0);
   left:-500px;
   top:0;
   bottom:0;
   height:100%;
   width:270px;
+  z-index:9;
   background:#111;
   color:@color-light;
 }
