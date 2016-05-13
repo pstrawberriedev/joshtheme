@@ -1,5 +1,5 @@
 {{! Previous/next page links - only displayed on page 2+ }}
-<div class="extra-pagination inner">
+<div class="pagination top">
     {{pagination}}
 </div>
 
@@ -7,7 +7,7 @@
 {{#foreach posts}}
 <article class="{{post_class}}">
     <header class="post-header">
-        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        <h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
     </header>
     <section class="post-excerpt">
         <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
@@ -22,4 +22,6 @@
 {{/foreach}}
 
 {{! Previous/next page links - displayed on every page }}
-{{pagination}}
+<div class="pagination bottom">
+  {{pagination}}
+</div>

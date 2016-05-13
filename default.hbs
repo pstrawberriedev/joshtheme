@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-  {{! Document Settings }}
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  {{! Page Meta }}
-  <title>{{meta_title}}</title>
-  <meta name="description" content="{{meta_description}}" />
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
 
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
-  {{! Styles'n'Scripts }}
-  <link rel="stylesheet" type="text/css" href="{{asset "css/styles.css"}}" />
+    {{! Styles }}
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
 
-  {{! Ghost outputs important style and meta data with this tag }}
-  {{ghost_head}}
-</head>
-<body class="{{body_class}} nav-closed">
+    {{! Ghost Meta }}
+    {{ghost_head}}
+  </head>
+  <body class="{{body_class}}">
 
-  {{navigation}}
+    {{navigation}}
 
-  <main>
+    <main>
 
-    {{! Everything else gets inserted here }}
-    {{{body}}}
+      {{! Everything else gets inserted here }}
+      {{{body}}}
 
-    <!-- Footer -->
-    <footer class="page-footer grey darken-4 white-text">
+      <!-- Footer -->
+      <footer class="page-footer grey darken-4 white-text">
         <div class="container">
-            <div class="row center">
-              <div class="col s12">
-                <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}.
-                 Made using:<br />
-                <a class="grey-text" target="_blank" href="https://git-scm.com/">git</a> + 
-                <a class="grey-text" target="_blank" href="https://github.com/">github</a> / 
-                <a class="grey-text" target="_blank" href="https://nodejs.org/en/">node</a> + 
-                <a class="grey-text" target="_blank" href="http://ghost.org/">ghost</a> / 
-                <a class="grey-text" target="_blank" href="http://materializecss.com">materialize</a>
-              </div>
+          <div class="row center">
+            <div class="col s12">
+              <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}.
+               Made using:<br />
+              <a class="grey-text" target="_blank" href="https://git-scm.com/">git</a> + 
+              <a class="grey-text" target="_blank" href="https://github.com/">github</a> / 
+              <a class="grey-text" target="_blank" href="https://nodejs.org/en/">node</a> + 
+              <a class="grey-text" target="_blank" href="http://ghost.org/">ghost</a>
+            </div>
           </div>
         </div>
-    </footer>
+      </footer>
 
-  </main>
+    </main>
 
-  {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-  <script type="text/javascript" src="{{asset "js/vendor/jquery.fitvids.js"}}"></script>
-  <script type="text/javascript" src="{{asset "js/vendor/TweenMax.min.js"}}"></script>
-  <script type="text/javascript" src="{{asset "js/vendor/materialize.min.js"}}"></script>
-  {{! Ghost outputs important scripts and data with this tag }}
-  {{ghost_foot}}
-  {{! The main JavaScript file for Casper }}
-  <script type="text/javascript" src="{{asset "js/script.js"}}"></script>
+    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+    <script type="text/javascript" src="/assets/js/vendor/jquery-1.12.3.min.js"></script>
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+    {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="/assets/js/vendor/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/TweenMax.min.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/flowtype.js"></script>
+    <script type="text/javascript" src="/assets/js/navigation.js"></script>
+    <script type="text/javascript" src="/assets/js/script.js"></script>
 
-</body>
+  </body>
 </html>

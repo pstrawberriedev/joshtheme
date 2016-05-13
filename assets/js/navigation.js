@@ -2,46 +2,16 @@
   navigation.js
 */
 
-console.log('--> navigation.js loaded');
+console.log('--> navigation.js');
 
-$(document).ready(function() {
+var hamburger = $('#mobile-menu');
 
-  initializeMaterialNav();
-  
+// Window Scroll functions
+$(window).on('scroll', function() {
+    scrollPosition = $(this).scrollTop();
+    if (scrollPosition >= 70) {
+      TweenLite.to(hamburger, 0.2, { autoAlpha: .2, ease: Power1.easeInOut });
+    } else {
+      TweenLite.to(hamburger, 0.2, { autoAlpha: 1, ease: Power1.easeInOut });
+    }
 });
-
-// Initialize Materialize Plugins
-function initializeMaterialNav() {
-  // SideNav
-  $(".button-collapse").sideNav();
-  
-  // Scrollspy
-  doScrollspy();
-
-  // Pushpin
-  $('.table-of-contents').pushpin({ top: 80 });
-}
-
-// Custom Scrollspy Population
-function doScrollspy() {
-  if (eleScrollspy.length && eleScrollspyMenu.length) {
-    var eleMain = $('main');
-    var eleScrollspy = $('.scrollspy');
-    var eleScrollspyMenu = $('.table-of-contents');
-  
-  
-    eleScrollspy.each(function() {
-      
-      var self = $(this);
-      var linkText = self.find('h3').text();
-      var linkHref = self.attr('id');
-      
-      eleScrollspyMenu.append('<li><a href="#' + linkHref + '">' + linkText + '</a></li>');
-      
-      $('.scrollspy').scrollSpy()
-      
-    });
-  } else {
-    console.log('--> no scrollspy detected');
-  }
-}
