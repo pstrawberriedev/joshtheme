@@ -30,19 +30,14 @@
       {{{body}}}
 
       <!-- Footer -->
-      <footer class="page-footer grey darken-4 white-text">
-        <div class="container">
-          <div class="row center">
-            <div class="col s12">
-              <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}.
-               Made using:<br />
-              <a class="grey-text" target="_blank" href="https://git-scm.com/">git</a> + 
-              <a class="grey-text" target="_blank" href="https://github.com/">github</a> / 
-              <a class="grey-text" target="_blank" href="https://nodejs.org/en/">node</a> + 
-              <a class="grey-text" target="_blank" href="http://ghost.org/">ghost</a>
-            </div>
-          </div>
-        </div>
+      <footer id="footer" role="main">
+        <a class="hover" href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} 
+        <span class="hidden-xs typcn typcn-minus"></span> 
+        <span class="hidden-sm hidden-md hidden-lg"><br /></span>
+        Made with <span class="typcn typcn-heart"></span> and <a class="hover" target="_blank" href="https://en.wikipedia.org/wiki/Open-source_software">open-source</a> 
+        <span class="hidden-sm hidden-md hidden-lg"><br /></span>
+        <span class="hidden-xs typcn typcn-minus"></span> Running on <a class="hover" target="_blank" href="http://ghost.org/">ghost</a>
+
       </footer>
 
     </main>

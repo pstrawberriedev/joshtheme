@@ -16,6 +16,9 @@ $(window).resize(function() {
   ww = window.innerWidth;
   return ww;
 });
+$(document).ready(function() {
+  closeNav();
+});
 
 // Window Scroll functions
 $(window).on('scroll', function() {
@@ -78,7 +81,7 @@ Draggable.create(mobileNav, {
   bounds: mobileNavBounds,
   throwProps:true,
     onDragEnd:function() {
-      if (this.hitTest(mobileNavOverlap, 60)) {
+      if (this.hitTest(mobileNavOverlap, 20)) {
         closeNav();
       }
     }

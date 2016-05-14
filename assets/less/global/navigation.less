@@ -2,13 +2,8 @@
   Navigation
 */
 
-// Nav Container
-header[role=main] {
-  
-}
-
-// Nav
-nav[role=main] {
+// Head Navigation
+#nav[role=main] {
   position:relative;
   display:block;
   width:100%;
@@ -19,18 +14,20 @@ nav[role=main] {
   .logo {
     display:inline-block;
     position:relative;
-    padding-top:.45rem;
+    padding-top:.15rem;
     margin-left:80px;
     font-family:@font-pacifico;
-    font-size:1.1em;
+    font-size:1.4em;
       &:hover {text-decoration:none;}
   }
   @media(max-width:850px) {
-    text-align:center;
     .logo {
-      margin-left:0;
+      margin-left:.5rem;
       font-size:1.3em;
     }
+  }
+  @media(max-width:580px) {
+    padding-top:.3rem;
   }
   
 }
@@ -49,6 +46,9 @@ nav[role=main] {
       left:auto;
       right:0;
       text-align:right;
+    }
+    @media(max-width:580px) {
+      padding-top:.2rem;
     }
 }
 
@@ -117,4 +117,30 @@ nav[role=main] {
     @media(max-width:850px) {
       padding-top:0;
     }
+}
+
+// Footer Navigation
+#footer[role="main"] {
+  display:block;
+  position:relative;
+  background:@color-dark;
+  color:@color-light;
+  padding:1rem .5rem;
+  margin-top:2.5rem;
+  font-size:.8em;
+  text-align:center;
+  a {
+    display:inline-block;
+    padding:4px;
+    border:1px solid rgba(255,255,255,0.14);
+    margin:1px 0;
+    .border-radius(3px);
+    &.plain {
+      border:0;
+      padding:0;
+    }
+  }
+  @media (max-width:767px) {
+    text-align:left;
+  }
 }

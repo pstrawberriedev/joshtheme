@@ -2,7 +2,7 @@
   Fonts
 */
 
-// Custom Fonts
+// Custom Fonts (Local)
 @font-face {
     font-family: 'pacificoregular';
     src: url('/assets/fonts/pacifico-webfont.woff2') format('woff2'),
@@ -90,7 +90,9 @@ a, a:link, a:visited, a:hover, a:active {
   text-decoration:none;
   color:inherit;
 }
-a:hover {text-decoration:underline;}
+a:hover {
+  text-decoration:underline;
+}
 
 // Type
 p {
@@ -108,4 +110,16 @@ ol {
 }
 li {
 
+}
+
+// Forms
+input {
+  padding:.5rem;
+}
+
+// Other
+pre {
+  padding: 1rem;
+  border-radius: 3px;
+  background:#f5f5f5;
 }
