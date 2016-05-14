@@ -15,23 +15,27 @@ nav[role=main] {
   height:51px;
   .clearfix;
   .shadow-1;
-  .mobile, .logo {
+  text-align:left;
+  .logo {
     display:inline-block;
     position:relative;
     font-size:1.5em;
     text-transform:uppercase;
-  }
-  .logo {
     padding-top:.5rem;
     margin-left:80px;
   }
+  @media(max-width:850px) {
+    text-align:center;
+    .logo {margin-left:0;}
+  }
+  
 }
 
 #mobile-menu {
   height:50px;
   width:80px;
   position:fixed;
-  z-index:10;
+  z-index:4000;
   top:0;
   left:0;
   cursor:pointer;
@@ -44,16 +48,48 @@ nav[role=main] {
     }
 }
 
-#mobile-nav {
-  position:fixed;
-  display:block;
-  .opacity(0);
-  left:-500px;
+#mobile-nav-bounds {
+  position:absolute;
+  left:-200px;
+  top:0;
+  bottom:0;
+  width:470px;
+  height:100%;
+  background:transparent;
+  z-index:-1;
+}
+#mobile-nav-overlap {
+  position:absolute;
+  left:-270px;
   top:0;
   bottom:0;
   height:100%;
   width:270px;
-  z-index:9;
-  background:#111;
+  z-index:-1;
+}
+#mobile-nav {
+  position:fixed;
+  display:block;
+  .opacity(0);
+  .transform(translate(-500px,0));
+  top:0;
+  bottom:0;
+  height:100%;
+  width:270px;
+  z-index:3;
+  background:rgba(0,0,0,.95);
   color:@color-light;
+  padding-top:60px;
+    li {
+      display:block;
+      position:relative;
+      width:100%;
+      padding:.5rem 0 .5rem 1rem;
+        a {
+          position:relative;
+          display:block;
+          width:100%;
+          height:100%;
+      }
+    }
 }

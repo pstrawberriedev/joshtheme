@@ -44,10 +44,15 @@
 	border-top-right-radius: @border-top-right-radius;
 }
 .transition(@transition) {
-	-webkit-transition:@transition;
-	-moz-transition:@transition;
-	-o-transition:@transition;
-	transition:@transition;
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
+}
+.transform(@transform) {
+	-ms-transform: @transform;
+  -webkit-transform: @transform;
+  transform: @transform;
 }
 .box-shadow (@box-shadow) {
 	-webkit-box-shadow: @box-shadow;
