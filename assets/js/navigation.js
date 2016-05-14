@@ -5,10 +5,17 @@
 console.log('--> navigation.js');
 
 // Vars
+var ww = window.innerWidth;
 var hamburger = $('#mobile-menu');
 var mobileNav = $('#mobile-nav');
 var mobileNavBounds = $('#mobile-nav-bounds');
 var mobileNavOverlap = $('#mobile-nav-overlap');
+
+// Resize Function
+$(window).resize(function() {
+  ww = window.innerWidth;
+  return ww;
+});
 
 // Window Scroll functions
 $(window).on('scroll', function() {
@@ -34,7 +41,9 @@ function closeNav() {
 }
 function openNav() {
   TweenLite.to(mobileNav, .3, { x: 0, autoAlpha:1, ease: Power1.easeOut })
-  TweenLite.to(hamburger, .3, { color:"#fff", ease: Power1.easeOut })
+  if(ww >= 851) {
+    TweenLite.to(hamburger, .3, { color:"#fff", ease: Power1.easeOut })
+  }
   hamburger.addClass('active');
   mobileNav.attr("aria-hidden","false");
 }

@@ -12,27 +12,31 @@ nav[role=main] {
   position:relative;
   display:block;
   width:100%;
-  height:51px;
+  height:53px;
   .clearfix;
   .shadow-1;
   text-align:left;
   .logo {
     display:inline-block;
     position:relative;
-    font-size:1.5em;
-    text-transform:uppercase;
-    padding-top:.5rem;
+    padding-top:.45rem;
     margin-left:80px;
+    font-family:@font-pacifico;
+    font-size:1.1em;
+      &:hover {text-decoration:none;}
   }
   @media(max-width:850px) {
     text-align:center;
-    .logo {margin-left:0;}
+    .logo {
+      margin-left:0;
+      font-size:1.3em;
+    }
   }
   
 }
 
 #mobile-menu {
-  height:50px;
+  height:53px;
   width:80px;
   position:fixed;
   z-index:4000;
@@ -77,19 +81,40 @@ nav[role=main] {
   height:100%;
   width:270px;
   z-index:3;
-  background:rgba(0,0,0,.95);
+  background:rgba(0,0,0,.97);
   color:@color-light;
   padding-top:60px;
+    span {
+      display:block;
+      position:absolute;
+      top:-30px;
+      right:2rem;
+      font-size:1.2em;
+    }
     li {
       display:block;
       position:relative;
       width:100%;
-      padding:.5rem 0 .5rem 1rem;
+      font-size:1.8em;
+      font-family:@font-roboto-thin;
         a {
           position:relative;
           display:block;
+          padding:.6rem 0 .6rem 1.5rem;
           width:100%;
           height:100%;
+          border-bottom:1px solid rgba(255,255,255,0.1);
+          .transition(background 0.3s ease);
+          &:first-child {
+            border-top:1px solid rgba(255,255,255,0.1);
+          }
+          &:hover {
+            background:rgba(255,255,255,0.1);
+            text-decoration:none;
+          }
       }
+    }
+    @media(max-width:850px) {
+      padding-top:0;
     }
 }
