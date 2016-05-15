@@ -81,8 +81,10 @@ Draggable.create(mobileNav, {
   bounds: mobileNavBounds,
   throwProps:true,
     onDragEnd:function() {
-      if (this.hitTest(mobileNavOverlap, 20)) {
+      if (this.hitTest(mobileNavOverlap, 100)) {
         closeNav();
+      } else {
+        openNav();
       }
     }
 });

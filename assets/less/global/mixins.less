@@ -88,23 +88,8 @@
 .no-r {padding-right:0;}
 .no-pull {margin-right:0; margin-left:0;}
 
-/* Browser Overrides */
-ul, li, p, h1, h2, h3, h4, h5 {
-  -webkit-margin-before: 0px;
-  -webkit-margin-after: 0px;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-  -webkit-padding-start: 0px;
-  list-style-type:none;
-}
-.noSelect {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 /* Utility */
+
 // Layout
 .tableCenter {display:table;margin:0 auto;}
 
@@ -123,7 +108,15 @@ ul, li, p, h1, h2, h3, h4, h5 {
   .shadow-1;
 }
 
-/* Clearfix */
+// Elements
+.noSelect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// Clearfix
 .clearfix,
 .clearfix:before,
 .clearfix:after,

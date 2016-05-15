@@ -1,0 +1,68 @@
+/*
+  Author
+*/
+
+.author-profile {
+  max-width:900px;
+  margin:0 auto;
+  
+  .author-basics {
+    text-align:center;
+    width:100%;
+    margin-bottom:.5rem;
+    .clearfix;
+    .wrap {
+      .clearfix;
+      width:auto;
+      margin:0 auto;
+      img {
+        display:block;
+        max-width:100px;
+        float:left;
+        margin:0 1.4rem 0 0;
+      }
+      .author-title {
+        float:left;
+        position:relative;
+        display:inline-block;
+      }
+    }
+  }
+  
+  .author-meta {
+    text-align:center;
+      .author-meta-item {
+        @media (max-width:767px) {
+          margin-bottom:.8rem;
+        }
+      }
+  }
+  
+  &.in-post {
+    .author-basics {
+      img {
+        max-width:50px;
+      }
+    }
+    .author-meta-item {
+      display:inline-block;
+      &+ {
+        margin-left:1rem;
+      }
+    }
+  }
+  
+}
+
+.author-seperator {
+  width:100%;
+  display:block;
+  position:relative;
+  height:1px;
+  background:#f0f0f0;
+  margin:1.3rem 0 .8rem 0;
+}
+
+.author-posts-by {
+  margin-bottom:0;
+}

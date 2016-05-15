@@ -4,24 +4,19 @@
 </div>
 
 {{! This is the post loop - each post will be output using this markup }}
-<div id="loop">
+<div id="loop" class="loop-author">
   <div class="row">
     {{#foreach posts}}
-      <div class="single col-md-4 col-sm-6">
+      <div class="single col-md-3 col-sm-6">
         <article class="{{post_class}}">
             <header class="post-header">
-                <h4 class="post-title"><a href="{{url}}">{{{title}}}</a></h4>
+              <h5 class="post-title">
+                <a href="{{url}}">{{{title}}}</a>
+              </h5>
             </header>
-            <section class="post-excerpt">
-                <p>
-                  {{excerpt words="26"}}... 
-                  <a class="read-more" href="{{url}}"><span class="typcn typcn-arrow-right-thick"></span></a>
-              </p>
-            </section>
             <footer class="post-meta">
-                {{author}},
               <time class="post-date" datetime="{{date format='MMMM-DD'}}">
-                {{date format="MMMM DD"}}
+                published {{date format="MMMM DD"}}
               </time>
             </footer>
         </article>

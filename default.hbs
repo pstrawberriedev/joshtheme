@@ -24,23 +24,21 @@
 
     {{navigation}}
 
-    <main>
+    <main class="container-fluid">
 
       {{! Everything else gets inserted here }}
       {{{body}}}
 
-      <!-- Footer -->
-      <footer id="footer" role="main">
-        <a class="hover" href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} 
-        <span class="hidden-xs typcn typcn-minus"></span> 
-        <span class="hidden-sm hidden-md hidden-lg"><br /></span>
-        Made with <span class="typcn typcn-heart"></span> and <a class="hover" target="_blank" href="https://en.wikipedia.org/wiki/Open-source_software">open-source</a> 
-        <span class="hidden-sm hidden-md hidden-lg"><br /></span>
-        <span class="hidden-xs typcn typcn-minus"></span> Running on <a class="hover" target="_blank" href="http://ghost.org/">ghost</a>
-
-      </footer>
-
     </main>
+    
+    <!-- Footer -->
+    <footer id="footer" role="main">
+      <a class="hover" href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} 
+      <span class="hidden-xs typcn typcn-minus"></span> 
+      <span class="hidden-sm hidden-md hidden-lg"><br /></span>
+      Made with <span class="typcn typcn-heart"></span> and <a class="hover" target="_blank" href="http://ghost.org/">ghost</a>
+
+    </footer>
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
     <script type="text/javascript" src="/assets/js/vendor/jquery-1.12.3.min.js"></script>
