@@ -37,12 +37,20 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('/assets/fonts/opensans-bold-webfont.woff2') format('woff2'),
+         url('/assets/fonts/opensans-bold-webfont.woff') format('woff'),
+         url('/assets/fonts/opensans-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 // Vars
-@font-pacifico:'pacificoregular', Georgia, serif;
-@font-ubuntu:'ubuntubold', Arial, Verdana, sans-serif;
-@font-roboto:'robotoregular', Arial, Verdana, sans-serif;
-@font-roboto-thin:'robotothin', Arial, Verdana, sans-serif;
+@font-logo:'pacificoregular', Georgia, serif;
+@font-header:'open_sansbold', Arial, Verdana, sans-serif;
+@font-default:'robotoregular', Arial, Verdana, sans-serif;
+@font-default-thin:'robotothin', Arial, Verdana, sans-serif;
 
 @color-light:#fff;
 @color-dark:#242424;
@@ -59,7 +67,7 @@ ul, ol, li, p, h1, h2, h3, h4, h5,blockquote {
 
 html {
   font-size:16px;
-  font-family:@font-roboto;
+  font-family:@font-default;
   font-weight:400;
   color:@color-dark;
 }
@@ -71,7 +79,7 @@ h1,h2,h3,h4,h5,h6,p {
 h1,h2,h3,h4,h5 {
   padding:0;
   margin:1rem 0;
-  font-family:@font-ubuntu;
+  font-family:@font-header;
 }
 h1 {
   font-size:4em;

@@ -16,7 +16,6 @@ $('body').flowtype({
 //Set Posts in Loop to Equal Height
 var posts = $('#loop .single');
 var maxHeight = Math.max.apply(null, posts.map(function () {
-  console.log($(this).height());
   return $(this).height();
 }).get());
 $(window).load(function() {
