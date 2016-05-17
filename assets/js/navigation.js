@@ -37,13 +37,13 @@ $(window).on('scroll', function() {
 
 // Nav Menu
 function closeNav() {
-  TweenLite.to(mobileNav, .42, { x: "-500px", autoAlpha:0, ease: Power1.easeOut })
+  TweenLite.to(mobileNav, .25, { x: "-270px", autoAlpha:0, ease: Power1.easeOut })
   TweenLite.to(hamburger, .3, { color:"#424242", ease: Power1.easeOut })
   hamburger.removeClass('active');
   mobileNav.attr("aria-hidden","true");
 }
 function openNav() {
-  TweenLite.to(mobileNav, .3, { x: 0, autoAlpha:1, ease: Power1.easeOut })
+  TweenLite.to(mobileNav, .25, { x: 0, autoAlpha:1, ease: Power1.easeOut })
   if(ww >= 851) {
     TweenLite.to(hamburger, .3, { color:"#fff", ease: Power1.easeOut })
   }
