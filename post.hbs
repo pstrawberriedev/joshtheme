@@ -6,21 +6,24 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-  <article class="container {{post_class}} single">
-    <div class="post-wrapper">
-      <header class="post">
-          <h1 class="post-title">{{title}}</h1>
-          <section class="post-meta">
+  <header role="banner">
+    <h1 class="post-title">{{title}}</h1>
+    <section class="post-meta">
+      {{#author}}
+        <a class="author hover" href="{{url}}"><span class="typcn typcn-user"> {{name}}</a>
+      {{/author}}
+      {{! Tags }}
+      {{#foreach tags}}
+        <a class="tag hover" href="{{url}}"><span class="typcn typcn-tag"> {{name}}</a>
+      {{/foreach}}
+      <time class="post-date hover" datetime="{{date format='MMMM-DD-YYYY'}}">
+        <span class="typcn typcn-calendar"></span> {{date format="MMMM DD, YYYY"}}
+      </time>
+    </section>
+  </header>
 
-              <time class="post-date" datetime="{{date format='MMMM-DD-YYYY'}}">
-                <span class="typcn typcn-pen"> {{date format="MMMM DD, YYYY"}}
-              </time>
-              {{! Tags }}
-              {{#foreach tags}}
-                <a class="tag hover" href="{{url}}"><span class="typcn typcn-tag"> {{name}}</a>
-              {{/foreach}}
-          </section>
-      </header>
+  <main class="content {{post_class}} single">
+    <div class="post-wrapper">
 
       <section class="post-content">
           {{content}}
@@ -48,6 +51,6 @@
         
       </footer>
     </div>
-  </article>
+  </main>
 
 {{/post}}

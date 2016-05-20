@@ -2,11 +2,18 @@
   Loop
 */
 
-#tag {
-  max-width:900px;
-  margin:0 auto;
+.page-tag {
+  
   text-align:center;
-  // Single Post
+  
+  // header[role=banner]
+  // extended from base.less, colors.less
+  header[role=banner] {
+    background:@color-green-dark;
+    color:@color-light;
+  }
+  
+  // Single Post In Tag Loop
   .single {
     margin-bottom:1rem;
   }
