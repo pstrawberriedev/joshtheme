@@ -7,7 +7,6 @@
 <section class="page-post">
   {{#post}}
 
-    <h1 class="post-title">{{title}}</h1>
     <header role="banner">
       <section class="post-meta">
         {{#author}}
@@ -18,10 +17,13 @@
           <a class="tag hover" href="{{url}}"><span class="typcn typcn-tag"> {{name}}</a>
         {{/foreach}}
         <time class="post-date hover" datetime="{{date format='MMMM-DD-YYYY'}}">
-          <span class="typcn typcn-calendar"></span> {{date format="MMMM DD, YYYY"}}
+          <span class="typcn typcn-calendar"></span> 
+          <span class="sr-only">Published On </span>{{date format="MMMM DD, YYYY"}}
         </time>
       </section>
     </header>
+  
+    <h1 class="post-title">{{title}}</h1>
 
     <main class="content {{post_class}} single">
       <div class="post-wrapper">
