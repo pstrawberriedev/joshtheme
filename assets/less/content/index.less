@@ -10,9 +10,13 @@
     background:@color-dark;
     color:@color-light;
     h1 {
-      font-size:4.5em;
+      font-size:4em;
+      font-family:@font-logo;
+        @media(max-width:500px) {
+          font-size:3em;
+        }
     }
-    p {font-family:@font-default;}
+    p {margin-top:.2rem;}
   }
   
 }
