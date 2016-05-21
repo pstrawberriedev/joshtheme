@@ -4,53 +4,55 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! Everything inside the #post tags pulls data from the post }}
-{{#post}}
+<section class="page-post">
+  {{#post}}
 
-  <header role="banner">
     <h1 class="post-title">{{title}}</h1>
-    <section class="post-meta">
-      {{#author}}
-        <a class="author hover" href="{{url}}"><span class="typcn typcn-user"> {{name}}</a>
-      {{/author}}
-      {{! Tags }}
-      {{#foreach tags}}
-        <a class="tag hover" href="{{url}}"><span class="typcn typcn-tag"> {{name}}</a>
-      {{/foreach}}
-      <time class="post-date hover" datetime="{{date format='MMMM-DD-YYYY'}}">
-        <span class="typcn typcn-calendar"></span> {{date format="MMMM DD, YYYY"}}
-      </time>
-    </section>
-  </header>
-
-  <main class="content {{post_class}} single">
-    <div class="post-wrapper">
-
-      <section class="post-content">
-          {{content}}
+    <header role="banner">
+      <section class="post-meta">
+        {{#author}}
+          <a class="author hover" href="{{url}}"><span class="typcn typcn-user"> {{name}}</a>
+        {{/author}}
+        {{! Tags }}
+        {{#foreach tags}}
+          <a class="tag hover" href="{{url}}"><span class="typcn typcn-tag"> {{name}}</a>
+        {{/foreach}}
+        <time class="post-date hover" datetime="{{date format='MMMM-DD-YYYY'}}">
+          <span class="typcn typcn-calendar"></span> {{date format="MMMM DD, YYYY"}}
+        </time>
       </section>
+    </header>
 
-      <footer class="post-footer">
+    <main class="content {{post_class}} single">
+      <div class="post-wrapper">
 
-        {{!--
-        <section class="share">
-            <h4>Share this post</h4>
-            <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
-                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                <span class="hidden">Twitter</span>
-            </a>
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                <span class="hidden">Facebook</span>
-            </a>
-            <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                <span class="hidden">Google+</span>
-            </a>
+        <section class="post-content">
+            {{content}}
         </section>
-        --}}
-        
-      </footer>
-    </div>
-  </main>
 
-{{/post}}
+        <footer class="post-footer">
+
+          {{!--
+          <section class="share">
+              <h4>Share this post</h4>
+              <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                  <span class="hidden">Twitter</span>
+              </a>
+              <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                  onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                  <span class="hidden">Facebook</span>
+              </a>
+              <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                 onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                  <span class="hidden">Google+</span>
+              </a>
+          </section>
+          --}}
+
+        </footer>
+      </div>
+    </main>
+
+  {{/post}}
+</section>

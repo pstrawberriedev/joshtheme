@@ -4,7 +4,7 @@
 </div>
 
 {{! This is the post loop - each post will be output using this markup }}
-<div id="loop" class="loop-author">
+<section id="loop" class="loop-author">
   <div class="row">
     {{#foreach posts}}
       <div class="single col-md-3 col-sm-6">
@@ -14,16 +14,15 @@
                 <a href="{{url}}">{{{title}}}</a>
               </h5>
             </header>
-            <footer class="post-meta">
-              <time class="post-date" datetime="{{date format='MMMM-DD'}}">
-                published {{date format="MMMM DD"}}
-              </time>
-            </footer>
+            <time class="post-date" datetime="{{date format='MMMM-DD'}}">
+              <span class="typcn typcn-calendar" aria-hidden="true"></span>
+              <span class="sr-only">Post published on</span>{{date format="MMMM DD"}}
+            </time>
         </article>
       </div>
     {{/foreach}}
   </div>
-</div>
+</section>
       
 {{! Previous/next page links - displayed on every page }}
 <div class="pagination bottom">

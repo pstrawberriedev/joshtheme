@@ -2,6 +2,18 @@
   Base
 */
 
+// Accessibility
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 // Global Setup
 img {
   max-width:100%;
@@ -13,7 +25,7 @@ figure {
 
 // Headers
 header[role=banner] {
-  padding:1.7rem 0 1rem 0;
+  padding:1rem;
   margin-left:-15px;
   margin-right:-15px;
   margin-bottom:1rem;

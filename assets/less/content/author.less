@@ -2,57 +2,47 @@
   Author
 */
 
-.author-profile {
-  max-width:900px;
-  margin:0 auto;
-  
-  .author-basics {
+.page-author {
+
+  // header[role=banner]
+  // extended from base.less, colors.less
+  header[role=banner] {
+    background:@color-blue-darker;
+    color:@color-light;
     text-align:center;
-    width:100%;
-    margin-bottom:.5rem;
-    .clearfix;
-    .wrap {
-      .clearfix;
-      width:auto;
-      margin:0 auto;
-      figure,img {
-        display:block;
-        max-width:100px;
-        float:left;
-        margin:0 1.4rem 0 0;
-          @media (max-width:560px) {
-            display:block;
-            margin:0 auto;
-        }
-      }
-      .author-title {
-        float:left;
-        position:relative;
+    padding-bottom:0;
+      h1 {
         display:inline-block;
+        font-size:4.5rem;
       }
-    }
+  }
+  
+  .author-image, .author-image img {
+    display:inline-block;
+    max-height:80px;
   }
   
   .author-meta {
     text-align:center;
-      .author-meta-item {
+      .meta-item:nth-child(2) {
+        border-left:1px solid rgba(255,255,255,.1);
+        border-right:1px solid rgba(255,255,255,.1);
         @media (max-width:767px) {
-          margin-bottom:.8rem;
+          border-left:0;
+          border-right:0;
+          margin:.8rem 0;
+          padding:.8rem 0;
+          border-top:1px solid rgba(255,255,255,.1);
+          border-bottom:1px solid rgba(255,255,255,.1);
         }
       }
   }
   
-}
-
-.author-seperator {
-  width:100%;
-  display:block;
-  position:relative;
-  height:1px;
-  background:#f0f0f0;
-  margin:1.3rem 0 .8rem 0;
-}
-
-.author-posts-by {
-  margin-bottom:0;
+  blockquote {
+    margin:2rem auto;
+    max-width:920px;
+    border-bottom:1px solid #eee;
+    padding-bottom:1.5rem;
+  }
+  
 }
