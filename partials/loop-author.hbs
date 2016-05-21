@@ -14,9 +14,9 @@
                 <a href="{{url}}">{{{title}}}</a>
               </h5>
             </header>
-            <time class="post-date" datetime="{{date format='MMMM-DD'}}">
-              <span class="typcn typcn-calendar" aria-hidden="true"></span>
-              <span class="sr-only">Post published on</span>{{date format="MMMM DD"}}
+            <time class="post-date" datetime="{{date published_at format='MMMM-DD'}}">
+              <span class="typcn typcn-calendar"  aria-hidden="true"></span> 
+              Published {{date published_at timeago="true"}}
             </time>
         </article>
       </div>
