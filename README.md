@@ -1,12 +1,8 @@
 # Josh.care Theme
 A [Ghost Blog](http://github.com/tryghost/ghost/) theme for my site using the [Casper Theme](http://github.com/tryghost/ghost/) base
 
-##### LESS compiled independently using [less-watch-compiler](https://github.com/jonycheung/deadsimple-less-watch-compiler)
-```
-npm install -g less-watch-compiler
-less-watch-compiler joshtheme/assets/less joshtheme/assets/css styles.less
-```
-
+##### LESS compiled independently
+This will be updated in the future
 
 ##### Copyright & License: Applies to [Casper Theme](http://github.com/tryghost/ghost/), as well as this theme ([Josh.care Theme](https://github.com/pstrawberriedev/joshtheme))
 
