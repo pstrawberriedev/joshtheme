@@ -63,7 +63,7 @@ hamburger.on('click', function() {
   }
   
   // Close on Document Click
-  $(document).on('click', function(event) {
+  $(document).on('click mouseenter', function(event) {
     if(!$(event.target).closest(hamburger).length && !$(event.target).closest(mobileNav).length && hamburger.hasClass('active')) {
       closeNav();
     }
