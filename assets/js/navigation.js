@@ -8,6 +8,7 @@ console.log('--> navigation.js');
 var ww = window.innerWidth;
 var hamburger = $('#mobile-menu');
 var mobileNav = $('#mobile-nav');
+var mobileNavLi = $('#mobile-nav li');
 var mobileNavBounds = $('#mobile-nav-bounds');
 var mobileNavOverlap = $('#mobile-nav-overlap');
 
@@ -50,6 +51,8 @@ function openNav() {
   hamburger.addClass('active');
   mobileNav.attr("aria-hidden","false");
 }
+
+// Hamburger Icon On-Click
 hamburger.on('click', function() {
   
   // Default Action
@@ -75,11 +78,32 @@ hamburger.on('click', function() {
   
 });
 
+// Emulate Hover on Mobile Nav Links
+mobileNavLi.mouseenter(function() {
+  TweenLite.to($(this), 0.25, { background:"rgba(255,255,255,.3)", ease: Power1.easeInOut });
+  mobileNav.css('cursor','pointer');
+}).mouseleave(function() {
+  TweenLite.to($(this), 0.25, { background:"rgba(255,255,255,0)", ease: Power1.easeInOut });
+  mobileNav.css('cursor','move');
+});
+
 // Drag Nav to Close
 Draggable.create(mobileNav, {
   type:"x",
   bounds: mobileNavBounds,
+  minimumMovement:5,
   throwProps:true,
+    // Allow both clicking and dragging on links (z-index:-1 on <a> in css)
+    onClick:function(e) {
+      var jqueryEvent = $(e.target);
+      if(jqueryEvent.is('li')) {
+        var link = jqueryEvent.find('a')[0];
+        console.log(link);
+        //link.css('background','rgba(0,0,0,0.1)');
+        link.click();
+        //window.location = link.attr('href');
+      }
+    },
     onDragEnd:function() {
       if (this.hitTest(mobileNavOverlap, 100)) {
         closeNav();
