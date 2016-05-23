@@ -17,6 +17,7 @@
       </header>
     
       <div class="row author-meta">
+        
           {{#if location}}
             <div class="col-sm-4 meta-item">
               <span class="typcn typcn-location-outline"></span><br />
@@ -45,9 +46,8 @@
   
 </section>
 
-
-<main class="content" role="main">
-    {{! The tag below includes the post loop - partials/loop.hbs }}
+<main class="content page-author" role="main">
+  
     {{> "loop-author"}}
 
 </main>

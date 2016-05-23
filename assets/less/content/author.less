@@ -4,10 +4,12 @@
 
 .page-author {
 
+  //+ Header Area
+  
   // header[role=banner]
   // extended from base.less, colors.less
   header[role=banner] {
-    background:@color-blue-darker;
+    background:@color-pink-dark;
     color:@color-light;
     text-align:center;
     padding-bottom:0;
@@ -24,6 +26,9 @@
   
   .author-meta {
     text-align:center;
+    max-width:920px;
+    margin-left:auto;
+    margin-right:auto;
       .meta-item:nth-child(2) {
         border-left:1px solid rgba(255,255,255,.1);
         border-right:1px solid rgba(255,255,255,.1);
@@ -43,6 +48,17 @@
     max-width:920px;
     border-bottom:1px solid #eee;
     padding-bottom:1.5rem;
+  }
+  
+  hr {
+    max-width:920px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  //+ In-Page
+  h3 {
+    font-weight:normal;
   }
   
 }

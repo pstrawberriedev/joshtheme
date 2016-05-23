@@ -5,23 +5,34 @@
 
 {{! This is the post loop - each post will be output using this markup }}
 <section id="loop" class="loop-author">
+  
   <div class="row">
+    
     {{#foreach posts}}
+    
       <div class="single col-md-3 col-sm-6">
+        
         <article class="{{post_class}}">
+          
             <header class="post-header">
               <h5 class="post-title">
                 <a href="{{url}}">{{{title}}}</a>
               </h5>
             </header>
-            <time class="post-date hover" datetime="{{date format='MMMM-DD-YYYY'}}">
+          
+            <time class="post-date" datetime="{{date format='MMMM-DD-YYYY'}}">
               <span class="typcn typcn-calendar"></span> 
               <span class="sr-only">Published On </span>{{date format="MMMM DD, YYYY"}}
             </time>
+          
         </article>
+        
       </div>
+    
     {{/foreach}}
+    
   </div>
+  
 </section>
       
 {{! Previous/next page links - displayed on every page }}
