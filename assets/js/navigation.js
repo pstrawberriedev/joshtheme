@@ -93,15 +93,13 @@ Draggable.create(mobileNav, {
   bounds: mobileNavBounds,
   minimumMovement:5,
   throwProps:true,
-    // Allow both clicking and dragging on links (z-index:-1 on <a> in css)
+    // Allow both clicking and dragging on links (<a> needs z-index:-1)
     onClick:function(e) {
       var jqueryEvent = $(e.target);
       if(jqueryEvent.is('li')) {
         var link = jqueryEvent.find('a')[0];
         console.log(link);
-        //link.css('background','rgba(0,0,0,0.1)');
         link.click();
-        //window.location = link.attr('href');
       }
     },
     onDragEnd:function() {
