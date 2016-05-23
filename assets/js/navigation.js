@@ -12,31 +12,7 @@ var mobileNavLi = $('#mobile-nav li');
 var mobileNavBounds = $('#mobile-nav-bounds');
 var mobileNavOverlap = $('#mobile-nav-overlap');
 
-// Resize Function
-$(window).resize(function() {
-  ww = window.innerWidth;
-  return ww;
-});
-$(document).ready(function() {
-  closeNav();
-});
-
-// Window Scroll functions
-$(window).on('scroll', function() {
-    scrollPosition = $(this).scrollTop();
-    
-    // Hamburger Opacity
-    if (scrollPosition >= 70) {
-      TweenLite.to(hamburger, 0.2, { autoAlpha: .2, ease: Power1.easeInOut });
-      hamburger.addClass('scrolled');
-    } else {
-      TweenLite.to(hamburger, 0.2, { autoAlpha: 1, ease: Power1.easeInOut });
-      hamburger.removeClass('scrolled');
-    }
-  
-});
-
-// Nav Menu
+// Nav Menu Universal Functions
 function closeNav() {
   TweenLite.to(mobileNav, .25, { x: "-270px", autoAlpha:0, ease: Power1.easeOut })
   TweenLite.to(hamburger, .3, { color:"#424242", ease: Power1.easeOut })
@@ -52,6 +28,34 @@ function openNav() {
   mobileNav.attr("aria-hidden","false");
 }
 
+// Resize Function
+$(window).resize(function() {
+  ww = window.innerWidth;
+  return ww;
+});
+$(document).ready(function() {
+  closeNav();
+});
+
+// Window Scroll functions
+$(window).on('scroll', function() {
+    scrollPosition = $(this).scrollTop();
+    
+    if(hamburger.hasClass('active')) {
+      closeNav();
+    }
+  
+    // Hamburger Opacity
+    if (scrollPosition >= 70) {
+      TweenLite.to(hamburger, 0.2, { autoAlpha: .2, ease: Power1.easeInOut });
+      hamburger.addClass('scrolled');
+    } else {
+      TweenLite.to(hamburger, 0.2, { autoAlpha: 1, ease: Power1.easeInOut });
+      hamburger.removeClass('scrolled');
+    }
+  
+});
+
 // Hamburger Icon On-Click
 hamburger.on('click', function() {
   
@@ -63,7 +67,7 @@ hamburger.on('click', function() {
   }
   
   // Close on Document Click
-  $(document).on('click dragstart', function(event) {
+  $(document).on('click', function(event) {
     if(!$(event.target).closest(hamburger).length && !$(event.target).closest(mobileNav).length && hamburger.hasClass('active')) {
       closeNav();
     }
