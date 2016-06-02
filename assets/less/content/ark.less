@@ -1,0 +1,28 @@
+/*
+  Ark - template for all ark posts/pages
+*/
+
+.page-ark {
+  
+  header[role=banner] {
+    background:rgba(0,130,130,.7);
+    color:@color-light;
+    
+    h1 {
+      line-height:1;
+    }
+    
+  }
+  
+  .ark-widget {
+    float:left;
+    margin:0 2rem 0 2rem;
+      @media(max-width:680px) {
+        float:none;
+        clear:both;
+        display:table;
+        margin:0 auto 1.5rem auto;
+      }
+  }
+  
+}
