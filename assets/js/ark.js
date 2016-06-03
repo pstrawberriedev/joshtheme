@@ -39,7 +39,7 @@ $(document).ready(function() {
       if(serverStatus === "up") {
         widgetPlayers.text(info.numberOfPlayers + '/' + info.maxNumberOfPlayers);
         widgetMap.text(' playing on ' + info.map);
-        widgetUpdated.text('Status updated at' + lastCheckedMinutes);
+        widgetUpdated.text('Status updated at ' + lastCheckedMinutes);
         widgetConnect.attr('href', info.connectUrl);
       }
       else {
