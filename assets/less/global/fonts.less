@@ -97,25 +97,22 @@ a, a:link, a:visited, a:hover, a:active {
   color:inherit;
 }
 
+main a {
+  color:@color-link!important;
+  text-decoration:underline!important;
+}
+
 // Type
 p {
   margin:.8rem 0;
   font-size:1.1em;
   @media(max-width:580px) {font-size:1.25em;}
-    a {
-      color:@color-link!important;
-      text-decoration:underline!important;
-    }
 }
 
 // Lists
 ul, ol {
   position:relative;
   display:block;
-    a {
-    color:@color-link!important;
-    text-decoration:underline!important;
-    }
 }
 
 li {
