@@ -12,20 +12,33 @@ var mobileNavLi = $('#mobile-nav li');
 var mobileNavBounds = $('#mobile-nav-bounds');
 var mobileNavOverlap = $('#mobile-nav-overlap');
 
+var liMobileSubmenu = $('#mobile-nav li[data-opens]');
+var mobileSubmenus = $('[data-submenu]');
+
 // Nav Menu Universal Functions
 function closeNav() {
+  
+  //default
   TweenLite.to(mobileNav, .25, { x: "-270px", autoAlpha:0, ease: Power1.easeOut })
   TweenLite.to(hamburger, .3, { color:"#424242", ease: Power1.easeOut })
   hamburger.removeClass('active');
   mobileNav.attr("aria-hidden","true");
+  //close submenus
+  TweenLite.to(mobileSubmenus, .2, { x: "270px", ease: Power1.easeOut });
+  liMobileSubmenu.removeClass('active');
+  liMobileSubmenu.find('a').attr('aria-expanded', 'false');
+  
 }
+
 function openNav() {
+  
   TweenLite.to(mobileNav, .25, { x: 0, autoAlpha:1, ease: Power1.easeOut })
   if(ww >= 851) {
     TweenLite.to(hamburger, .3, { color:"#fff", ease: Power1.easeOut })
   }
   hamburger.addClass('active');
   mobileNav.attr("aria-hidden","false");
+  
 }
 
 // Resize Function
@@ -35,6 +48,7 @@ $(window).resize(function() {
 });
 $(document).ready(function() {
   closeNav();
+  $(window).trigger('resize');
 });
 
 // Window Scroll functions
@@ -93,24 +107,61 @@ mobileNavLi.mouseenter(function() {
 
 // Drag Nav to Close
 Draggable.create(mobileNav, {
+  
   type:"x",
   bounds: mobileNavBounds,
   minimumMovement:5,
   throwProps:true,
+  
     // Allow both clicking and dragging on links (<a> needs z-index:-1)
     onClick:function(e) {
+      
       var jqueryEvent = $(e.target);
       if(jqueryEvent.is('li')) {
         var link = jqueryEvent.find('a')[0];
-        console.log(link);
+        
         link.click();
+        
       }
+      
     },
+  
     onDragEnd:function() {
-      if (this.hitTest(mobileNavOverlap, 100)) {
+      if (Draggable.hitTest(mobileNav,mobileNavOverlap, 120)) {
         closeNav();
       } else {
         openNav();
       }
     }
+  
+});
+
+// Mobile Submenus
+liMobileSubmenu.each(function() {
+
+  var self = $(this);
+  var menuLink = self.attr('data-opens');
+  var link = $(this).find('[aria-expanded]').first();
+  var menu = $('[data-submenu="' + menuLink + '"]');
+  var backLink = menu.find('li.back a');
+  
+  link.on('click', function() {
+    if(!self.hasClass('active')) {
+      TweenLite.to(menu, 0.25, { x:0, ease: Power1.easeInOut,onComplete:addClass });
+      link.attr('aria-expanded', 'true');
+    }
+  });
+  backLink.on('click', function() {
+    TweenLite.to(menu, 0.25, { x:270, ease: Power1.easeInOut,onComplete:removeClass });
+    link.attr('aria-expanded', 'false');
+  });
+  
+  function addClass() {
+    self.addClass('active');
+    menu.find('.back a').focus();
+  };
+  function removeClass() {
+    self.removeClass('active');
+    link.focus();
+  };
 });

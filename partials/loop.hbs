@@ -8,7 +8,7 @@
   <div class="row">
     {{#foreach posts}}
       <div class="single col-md-4 col-sm-6">
-        <article class="{{post_class}}">
+        <article class="post-card {{post_class}}">
             <header class="post-header">
                 <h5 class="post-title"><a href="{{url}}">{{{title}}}</a></h5>
             </header>
@@ -22,6 +22,13 @@
                 <span class="typcn typcn-calendar"  aria-hidden="true"></span> 
                 Published {{date published_at timeago="true"}}
               </time>
+              {{#if tags}}
+              <div class="post-tag">
+                {{#foreach tags}}
+                  <a href="{{url}}"><span class="typcn typcn-tag"> {{name}}</a>
+                {{/foreach}}
+              </div>
+              {{/if}}
             </footer>
         </article>
       </div>

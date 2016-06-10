@@ -7,7 +7,7 @@
   
   // Single Post
   .single {
-    margin-bottom:1rem;
+    margin-bottom:1.5rem;
       h5{margin-bottom:.2rem;}
       p {
         margin-top:.4rem;
@@ -43,6 +43,33 @@
       border-top:1px solid #eee;
       margin-top:.8rem;
     }
+  }
+  
+}
+
+// Loop Card Style
+.post-card {
+  padding: .8rem;
+  .shadow-1;
+  h5 {margin-top:0;}
+  .border-radius(3px);
+
+  .post-meta {
+    border-top:1px solid #eee;
+    margin-left:-14px;
+    margin-right:-15px;
+    padding:0 15px;
+    padding-top:10px;
+  }
+
+  // Card colors by tag
+  &.tag-meta {
+    background:@color-meta;
+    color:#fff;
+  }
+  &.tag-gaming {
+    background:@color-gaming;
+    color:#fff;
   }
   
 }
