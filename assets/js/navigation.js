@@ -33,7 +33,7 @@ function closeNav() {
 function openNav() {
   
   TweenLite.to(mobileNav, .25, { x: 0, autoAlpha:1, ease: Power1.easeOut })
-  if(ww >= 851) {
+  if(ww >= 1046) {
     TweenLite.to(hamburger, .3, { color:"#fff", ease: Power1.easeOut })
   }
   hamburger.addClass('active');
