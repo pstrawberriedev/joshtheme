@@ -87,13 +87,6 @@
   color:@color-light;
   padding-top:60px;
   overflow-x:hidden;
-    span {
-      display:block;
-      position:absolute;
-      top:-30px;
-      right:2rem;
-      font-size:1.2em;
-    }
     li {
       display:block;
       position:relative;
@@ -126,9 +119,8 @@
     li[data-opens] {
       
       [aria-expanded]:after {
-        top:.7rem;
+        top:.5rem;
         content:"\203A";
-        font-weight:bold;
         position:absolute;
         right:.65rem;
       }
@@ -146,9 +138,13 @@
       .shadow-off;
       z-index:2001;
       padding-top:60px;
-				@media(max-width:1045px) {
-					padding-top:0;
-				}
+        @media(max-width:1045px) {
+            padding-top:0;
+        }
+        li a {padding-left:1rem;}
+        li+li {
+          a {padding-left:2.3rem;}
+        }
     }
   
 }
