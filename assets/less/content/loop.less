@@ -50,26 +50,25 @@
 // Loop Card Style
 .post-card {
   padding: .8rem;
+  border-top:4px solid transparent;
   .shadow-1;
   h5 {margin-top:0;}
   .border-radius(3px);
 
   .post-meta {
-    border-top:1px solid #eee;
-    margin-left:-14px;
-    margin-right:-15px;
+    border-top:2px solid #eee;
+    margin-left:-12px;
+    margin-right:-13px;
     padding:0 15px;
     padding-top:10px;
   }
 
   // Card colors by tag
   &.tag-meta {
-    background:@color-meta;
-    color:#fff;
+    border-color: @color-meta;
   }
   &.tag-gaming {
-    background:@color-gaming;
-    color:#fff;
+    border-color: @color-gaming;
   }
   
 }
