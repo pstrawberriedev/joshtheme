@@ -38,10 +38,6 @@ html, body {
   max-width:980px;
 }
 
-@media(max-width:767px) {
-  p {word-wrap: break-word;}
-}
-
 // Elements
 pre, blockquote {
   position: relative;
@@ -57,6 +53,7 @@ blockquote {
   padding-left: 2rem;
   padding-bottom: 1rem !important;
   border-bottom: 0 !important;
+  word-wrap: break-word;
   &:before {
     content: '';
     positioN: absolute;
