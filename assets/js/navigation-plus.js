@@ -11,7 +11,8 @@ console.log('--> navigation.js');
   var $mobileNav = $('nav.nav-plus');
   var $pageContainer = $('#main-content');
 
-
+  var pagePosition = 0;
+	
   // Document Ready
   $(document).ready(function() {
     
@@ -58,6 +59,8 @@ console.log('--> navigation.js');
     if(!$('#video').length) { //fullscreen video page
       setTimeout(function() {
         $('body').removeClass(bodyOverlayClass);
+				console.log(pagePosition);
+				window.scrollTo(0,pagePosition);
       },400)
     }
   }
@@ -113,8 +116,11 @@ console.log('--> navigation.js');
   //
   $hamburger.on('click', function(e) {
     e.preventDefault();
-    window.scrollTo(0,$('body').scrollTop());
-
+		
+		if($('body').scrollTop() != 0) {
+			pagePosition = $('body').scrollTop();
+		}
+		
     // Default Action
     if(! $hamburger.hasClass('active')) {
       openNav();
