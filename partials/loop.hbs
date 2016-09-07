@@ -1,42 +1,41 @@
-{{! Previous/next page links - only displayed on page 2+ }}
+{{!-- Previous/next page links - only displayed on page 2+ 
 <div class="pagination top">
     {{pagination}}
-</div>
+</div>--}}
 
 {{! This is the post loop - each post will be output using this markup }}
 <section id="loop">
-  <div class="row">
     {{#foreach posts}}
-      <div class="single col-md-4 col-sm-6">
-        <article class="post-card {{post_class}}">
-            <header class="post-header">
-                <h5 class="post-title"><a href="{{url}}">{{{title}}}</a></h5>
-            </header>
-            <section class="post-excerpt">
-                <p>
-                  {{excerpt words="26"}}...<a class="read-more" title="Read {{title}}" alt="Read {{title}}" href="{{url}}"><span class="typcn typcn-arrow-forward"  aria-hidden="true"></span></a>
-              </p>
-            </section>
-            <footer class="post-meta">
-              <time class="post-date" datetime="{{date published_at format='MMMM-DD'}}">
-                <span class="typcn typcn-calendar"  aria-hidden="true"></span> 
-                Published {{date published_at timeago="true"}}
-              </time>
-              {{#if tags}}
-              <div class="post-tag">
-                {{#foreach tags}}
-                  <a href="{{url}}"><span class="typcn typcn-tag"> {{name}}</a>
-                {{/foreach}}
-              </div>
-              {{/if}}
-            </footer>
-        </article>
-      </div>
+      <article class="loop-post {{post_class}}">
+          <header class="post-header">
+              <h4 class="post-title">
+                <a href="{{url}}">{{{title}}}</a>
+              </h4>
+          </header>
+          <!--<section class="post-excerpt">
+              <p>
+                {{excerpt words="26"}}...<a class="read-more" title="Read {{title}}" alt="Read {{title}}" href="{{url}}"><span class="typcn typcn-arrow-forward"  aria-hidden="true"></span></a>
+            </p>
+          </section>-->
+          <footer class="post-meta">
+            <time class="post-date" datetime="{{date published_at format='MMMM-DD'}}">
+              <span class="icon-calendar"  aria-hidden="true"></span> 
+              {{date published_at}}
+              {{!-- {{date published_at timeago="true"}} --}}
+            </time>
+            {{#if tags}}
+            <div class="post-tag">
+              {{#foreach tags}}
+              <a href="{{url}}"><span class="icon-tag"></span> {{name}}</a>
+              {{/foreach}}
+            </div>
+            {{/if}}
+          </footer>
+      </article>
     {{/foreach}}
-  </div>
 </section>
       
 {{! Previous/next page links - displayed on every page }}
-<div class="pagination bottom">
+<div class="pagination bottom center">
   {{pagination}}
 </div>

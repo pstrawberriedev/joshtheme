@@ -4,34 +4,35 @@
   
   {{#author}}
   
-    <header role="banner">
+      <header role="banner">
       
         {{#if image}}
           <figure class="author-image">
-              <img alt="{{name}}'s Picture" title="{{name}}'s Picture" src="{{image}}" />
+              <img alt="{{name}}'s Picture" src="{{image}}" />
           </figure>
         {{/if}}
         <h1 class="author-title">
-          {{name}}
+          <span>{{name}}</span>
         </h1>
+        
       </header>
     
       <div class="row author-meta">
         
           {{#if location}}
             <div class="col-sm-4 meta-item">
-              <span class="typcn typcn-location-outline"></span><br />
+              <span class="icon-location"></span><br />
               {{location}}
             </div>
           {{/if}}
           {{#if website}}
             <div class="col-sm-4 meta-item">
-              <span class="typcn typcn-world-outline"></span><br />
+              <span class="icon-globe"></span><br />
               <a href="{{website}}">{{website}}</a>
             </div>
           {{/if}}
           <div class="col-sm-4 meta-item">
-            <span class="typcn typcn-pencil"></span><br />
+            <span class="icon-pencil"></span><br />
             {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
           </div>
         </div>

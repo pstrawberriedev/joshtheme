@@ -1,18 +1,14 @@
-{{! Previous/next page links - only displayed on page 2+ }}
-<div class="pagination top">
+{{!-- Previous/next page links - only displayed on page 2+ 
+<div class="container pagination top">
     {{pagination}}
-</div>
+</div>--}}
 
 {{! This is the post loop - each post will be output using this markup }}
-<section id="loop" class="loop-author">
-  
-  <div class="row">
+<section id="loop" class="container loop-author">
     
     {{#foreach posts}}
-    
-      <div class="single col-md-3 col-sm-6">
         
-        <article class="{{post_class}}">
+        <article class="loop-post {{post_class}}">
           
             <header class="post-header">
               <h5 class="post-title">
@@ -21,21 +17,17 @@
             </header>
           
             <time class="post-date" datetime="{{date format='MMMM-DD-YYYY'}}">
-              <span class="typcn typcn-calendar"></span> 
+              <span class="icon-calendar"></span> 
               <span class="sr-only">Published On </span>{{date format="MMMM DD, YYYY"}}
             </time>
           
         </article>
-        
-      </div>
     
     {{/foreach}}
-    
-  </div>
   
 </section>
       
 {{! Previous/next page links - displayed on every page }}
-<div class="pagination bottom">
+<div class="container pagination bottom center">
   {{pagination}}
 </div>

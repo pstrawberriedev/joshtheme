@@ -1,13 +1,15 @@
 <nav class="pagination" role="navigation" title="Page {{page}} of {{pages}}">
-    <span class="typcn typcn-document"  aria-hidden="true"></span>
+    <span class="icon-book"  aria-hidden="true"></span>&nbsp;&nbsp;
     <span class="sr-only">Total Pages</span>
-    <div class="page-count">
-      <span class="page-number">{{page}} / {{pages}}</span>
+    <div class="page-nav">
+      <div class="page-count">
+        <span class="page-number">{{page}} / {{pages}}</span>
+      </div>
+      {{#if prev}}
+          <a class="newer-posts" href="{{page_url prev}}">&larr; Newer Posts</a>
+      {{/if}}
+      {{#if next}}
+          <a class="older-posts" href="{{page_url next}}">Older Posts &rarr;</a>
+      {{/if}}
     </div>
-    {{#if prev}}
-        <a class="newer-posts" href="{{page_url prev}}">&larr; Newer Posts</a>
-    {{/if}}
-    {{#if next}}
-        <a class="older-posts" href="{{page_url next}}">Older Posts &rarr;</a>
-    {{/if}}
 </nav>

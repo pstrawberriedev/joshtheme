@@ -8,24 +8,25 @@
   {{#post}}
 
     <header role="banner">
+      <h1 class="post-title">{{title}}</h1>
       <section class="post-meta">
-        <time class="post-date hover" datetime="{{date format='MMMM-DD-YYYY'}}">
-          <span class="typcn typcn-calendar"></span> 
+        <time class="post-date" datetime="{{date format='MMMM-DD-YYYY'}}">
+          <span class="icon-calendar"></span> 
           <span class="sr-only">Published On </span>{{date format="MMMM DD, YYYY"}}
         </time>
         {{#author}}
-          <a class="author hover" href="{{url}}"><span class="typcn typcn-user"> {{name}}</a>
+        <a class="author" href="{{url}}"><span class="icon-user"></span> {{name}}</a>
         {{/author}}
         {{! Tags }}
         {{#foreach tags}}
-          <a class="tag hover" href="{{url}}"><span class="typcn typcn-tag"> {{name}}</a>
+            <a class="tag" href="{{url}}"><span class="icon-tag"></span> {{name}}</a>
         {{/foreach}}
       </section>
     </header>
   
-    <h1 class="post-title">{{title}}</h1>
+    
 
-    <article class="content {{post_class}} single">
+    <article class="container content {{post_class}} single">
       <div class="post-wrapper">
 
         <section class="post-content">

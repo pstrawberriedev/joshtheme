@@ -3,98 +3,63 @@
 */
 
 // Resets
-ul,ol,li,p,h1,h2,h3,h4,h5,figure,blockquote,hr {
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-start: 0;
+figure, blockquote, ul, ol, li, p, h1, h2, h3, h4, h5 {
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
   margin:0;
   padding:0;
 }
+
 ul, ol, li {
   list-style-type:none;
+  list-style-position:inside;
+}
+ul, ol, p {
+  margin-bottom:1.2rem;
 }
 
-// Accessibility
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
-// Global Setup
 img {
   max-width:100%;
   height:auto;
-}
-figure {
-  margin:0;
-}
-
-// Headers
-header[role=banner] {
-  padding:1rem;
-  margin-left:-15px;
-  margin-right:-15px;
-  margin-bottom:1rem;
-     h1, p {
-       font-family:@font-default-thin;
-       font-weight:normal;
-       text-align:center;
-    }
-    h1 {
-      font-size:5em;
-      margin-top:0;
-   }
-    p {font-size:1.4em;}
-}
-
-// Content Readable area width cap
-main.content, article.content {
-  
-  max-width:920px;
-  margin:0 auto;
-  
-}
-
-// Pre + Blockquote
-pre, blockquote {
   position:relative;
-  display:block;
+}
+
+// Structure
+html, body {
+  width:100%;
+  height:100%;
+  background:@color-bg-light;
+}
+
+.container {
+  max-width:980px;
+}
+
+// Elements
+pre, blockquote {
+  position: relative;
+  display: block;
   padding: 1rem;
   border-radius: 3px;
-  background:#f9f9f9;
-}
-blockquote {
-  margin-left:.8rem;
-  padding-left:2rem;
-  padding-bottom:1rem!important;
-  border-bottom:0!important;
-  p {margin:0;}
-  &:before {
-    content:'';
-    positioN:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    height:100%;
-    width:.4rem;
-    background-color:rgba(0,0,0,.4);
-  }
-  footer {
-    margin-top:1rem;
-    display:block;
-  }
+  background: #f9f9f9;
 }
 
-// hr
-hr {
-  border: 1px solid #eee;
-  margin:1.5rem 0;
+blockquote {
+  margin-left: .8rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem !important;
+  border-bottom: 0 !important;
+  &:before {
+    content: '';
+    positioN: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: .4rem;
+    background-color: rgba(0,0,0,0.4);
+  }
 }

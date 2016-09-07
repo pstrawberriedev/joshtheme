@@ -2,68 +2,33 @@
   Components
 */
 
-// Ark Server Widget
-.ark-widget {
-    display:inline-block;
-    position:relative;
-    padding:8px 10px 10px 10px;
-    margin-right:1rem;
-    .shadow-1;
-    background:transparent;
-        &:after {
-            content:"";
-            position:absolute;
-            top:0;
-            bottom:0;
-            left:0;
-            right:0;
-            z-index:-1;
-            background:transparent url('http://ark.josh.care/images/ark.png') no-repeat center center;
-            background-size:200px 200px;
-            .opacity(.1);
-        }
-
-    p {
-      margin:0;
-      font-family:@font-default!important;
-      text-align:left!important;
-    }
-
-    .status {
-        position:absolute;
-        display:block;
-        left:0;
-        top:0;
-        right:0;
-        height:3px;
-        &.up {background:rgba(0,130,0,.7);}
-        &.down {background:rgba(130,0,0,.7);}
-    }
-
-    .name {
-        padding-bottom:5px;
-        margin-bottom:5px;
-        border-bottom:1px solid #ddd;
-    }
-
-    .info {
-        text-align:left;
-        display:block;
-        font-size:12px;
-    }
-
-    .connect {
-        display:block;
-        padding:.7rem;
-        background:rgba(255,255,255,.8);
-        margin:8px -10px -10px -10px;
-        border-top:1px solid #eee;
-        text-align:center;
-            &.down {display:none;}
-            @media (max-width:767px) {
-                display:none;
-            }
-    }
-
+// Page Header
+header[role=banner] {
+  text-align:center;
+  width:100%;
+  display:block;
+  text-align:center;
+  padding:2rem;
+  margin-bottom:2rem;
+  h1 {.font-primary-thin;}
 }
 
+// Page Overlay
+#page-overlay {
+    display:none;
+    visibility:hidden;
+    position:fixed;
+    z-index:-2;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.6);
+}
+.overlay-active { //body class
+    position:fixed;
+    margin:auto;
+    overflow:hidden;
+}

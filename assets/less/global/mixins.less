@@ -43,16 +43,35 @@
 	-moz-border-top-right-radius: @border-top-right-radius;
 	border-top-right-radius: @border-top-right-radius;
 }
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+    -ms-animation: @arguments;
+     -o-animation: @arguments;
+	animation: @arguments;
+}
+.keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+    @-o-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
 .transition(@transition) {
-	-webkit-transition: @transition;
-	-moz-transition: @transition;
-	-o-transition: @transition;
-	transition: @transition;
+	-webkit-transition:@transition;
+	-moz-transition:@transition;
+	-o-transition:@transition;
+	transition:@transition;
 }
 .transform(@transform) {
-	-ms-transform: @transform;
-  -webkit-transform: @transform;
-  transform: @transform;
+  -ms-transform:@transform;
+  -webkit-transform:@transform;
+  transform:@transform;
+}
+.transition-transform(@transition) {
+    -webkit-transition: -webkit-transform @transition;
+    -moz-transition: -moz-transform @transition;
+    -o-transition: -o-transform @transition;
+    transition: transform @transition;
 }
 .box-shadow (@box-shadow) {
 	-webkit-box-shadow: @box-shadow;
@@ -80,60 +99,19 @@
     -webkit-box-sizing: @box-sizing;
     box-sizing: @box-sizing;
 }
-
-
-/* Bootstrap Override Classes */
-.no-lr {padding-left:0; padding-right:0;}
-.no-l {padding-left:0;}
-.no-r {padding-right:0;}
-.no-pull {margin-right:0; margin-left:0;}
-
-/* Utility */
-
-// Layout
-.tableCenter {display:table;margin:0 auto;}
-
-// Shadows
-.shadow-off {box-shadow: none !important;}
-.shadow-1 {box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);}
-.shadow-2 {box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);}
-.shadow-3 {box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-.shadow-4 {box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);}
-.hover {
-  transition: box-shadow .25s;
-  box-shadow: 0;
+.gradient (@startColor: #000, @endColor: white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
 }
-.hover:hover {
-  transition: box-shadow .25s;
-  .shadow-1;
+.horizontal-gradient (@startColor: #000, @endColor: white) {
+ 	background-color: @startColor;
+	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+	background-image: -moz-linear-gradient(left, @startColor, @endColor);
+	background-image: -ms-linear-gradient(left, @startColor, @endColor);
+	background-image: -o-linear-gradient(left, @startColor, @endColor);
 }
-
-// Elements
-.noSelect {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-// Clearfix
-.clearfix,
-.clearfix:before,
-.clearfix:after,
-.container:before,
-.container:after,
-.container-fluid:before,
-.container-fluid:after,
-.row:before,
-.row:after {
-  content: " ";
-  display: table;
-}
-.clearfix:after,
-.container:after,
-.container-fluid:after,
-.row:after {
-  clear: both;
-}
-
-

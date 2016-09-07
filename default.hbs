@@ -15,6 +15,8 @@
     <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
 
     {{! Styles }}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/css/entypo.min.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
 
     {{! Ghost Meta }}
@@ -24,34 +26,26 @@
 
     {{navigation}}
 
-    <main class="container-fluid">
+    <main id="main-content">
 
       {{! Everything else gets inserted here }}
       {{{body}}}
 
     </main>
     
-    <!-- Footer -->
-    <footer id="footer" role="main">
-      <a class="hover" href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} 
-      <span class="hidden-xs typcn typcn-minus"></span> 
-      <span class="hidden-sm hidden-md hidden-lg"><br /></span>
-      Made with <a class="hover" href="/using">this stuff</a>, <a class="hover" target="_blank" href="http://ghost.org/">ghost</a>, and <span class="typcn typcn-heart"></span><span class="sr-only">Love</span>
-
-    </footer>
+    
+    {{! Off-page elements }}
+    <div id="page-overlay"></div>
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script type="text/javascript" src="/assets/js/vendor/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/jquery-3.1.0.min.js"></script>
+    
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
-    {{! The main JavaScript file for Casper }}
-    <script type="text/javascript" src="/assets/js/vendor/jquery.fitvids.js"></script>
+    
+    {{! JS Theme Files }}
     <script type="text/javascript" src="/assets/js/vendor/TweenMax.min.js"></script>
-    <script type="text/javascript" src="/assets/js/vendor/Draggable.min.js"></script>
-    <script type="text/javascript" src="/assets/js/vendor/flowtype.js"></script>
-    <script type="text/javascript" src="/assets/js/navigation.js"></script>
-    <script type="text/javascript" src="/assets/js/script.js"></script>
-    <script type="text/javascript" src="/assets/js/ark.js"></script>
+    <script type="text/javascript" src="/assets/js/navigation-plus.js"></script>
 
   </body>
 </html>

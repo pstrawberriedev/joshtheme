@@ -3,44 +3,45 @@
     <li class="nav-{{!slug}}{{!#if current}} nav-current{{!/if}}" role="presentation"><a href="{{!url absolute="true"}}">{{!label}}</a></li>
 {{!/foreach}}
 -->
-<header role="main">
- 
-  <nav id="nav" role="main">
-    <div class="logo">
-      <a href="{{url absolute="true"}}" class="brand-logo">
-        <span class="typcn typcn-home"></span>
-        <span class="sr-only">Home</span>
-      </a>
-    </div>
-  </nav>
-  <ul id="mobile-nav" role="menubar" aria-hidden="true">
+
+<!-- Navigation -->
+<a id="mobile-menu" tabindex="0">
+  <span class="sr-only">Open Navigation Menu</span>
+  <span class="hammy-special">
+    <span class="fir"></span>
+    <span class="sec"></span>
+    <span class="thi"></span>
+  </span>
+</a>
+
+
+<nav class="nav-plus">
+
+  <div class="links">
+    <a class="home" href="/">
+      <span class="icon-home"></span>
+    </a>
+    
+    <!-- Nav Loop -->
     {{#foreach navigation}}
-      <li class="{{slug}}{{#if current}} active{{/if}}" role="menuitem">
-        <a href="{{url absolute="true"}}">{{label}}</a>
-      </li>
+      <a class="link {{#if current}}active{{/if}}" href="{{url absolute="true"}}">
+        {{label}}
+      </a>
     {{/foreach}}
-    <li aria-haspopup="true" role="menu" data-opens="tags">
-        <a aria-expanded="false">Tags</a>
-      </li>
-      <ul data-submenu="tags">
-        <li class="back">
-          <a>
-            &lsaquo; Tags <span class="sr-only">- back to previous menu</span>
-          </a>
-        </li>
-        <li>
-          <a href="/tag/meta">Meta</a>
-        </li>
-        <li>
-          <a href="/tag/gaming">Gaming</a>
-        </li>
-      </ul>
-  </ul>
-  <div id="mobile-nav-bounds"></div>
-  <div id="mobile-nav-overlap"></div>
-  <div id="mobile-menu" role="button">
-    <span class="sr-only">Open Menu</span>
-    <span class="typcn typcn-th-menu"></span>
   </div>
-  
-</header>
+
+  <div class="nav-footer">
+
+    <a class="link small" href="##">Back to josh.care</a>
+    <a class="link" href="https://github.com/pstrawberriedev/joshtheme" target="_blank">
+      &nbsp;
+      <span class="icon-github"></span>
+      <span class="small">Git dirty</span>
+    </a>
+    <div>
+      <span class="small">Made with <span class="icon-code"></span> <span class="icon-drop"></span> <span class="icon-drink"></span> <span class="icon-game-controller"></span> <span class="icon-music"></span> - <a href="/credits">credits</a></span>
+    </div>
+
+  </div>
+
+</nav>

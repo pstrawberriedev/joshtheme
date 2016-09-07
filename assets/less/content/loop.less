@@ -3,72 +3,59 @@
 */
 
 // Main Loop
+//
 #loop {
   
-  // Single Post
-  .single {
-    margin-bottom:1.5rem;
-      h5{margin-bottom:.2rem;}
-      p {
-        margin-top:.4rem;
-      }
+  text-align:center;
+  
+  //Article Wrapper
+  article.loop-post {
+    margin-bottom:2rem;
+    
+    .post-title {
+      display:inline-block;
+      border-bottom:1px solid #ddd;
+      padding-bottom:.3rem;
+      .font-primary;
+    }
+    
+    // Meta
+    time, .post-tag {
+      display:inline-block;
+      position:relative;
+      margin-top:.3rem;
+    }
+    time {margin-right:1rem;}
   }
   
-  @media (max-width:767px) {
-    .single+.single {
-      border-top:1px solid #eee;
+  // Author Loop
+  //
+  &.loop-author {
+
+    article.loop-post {
+      margin-bottom:1.8rem;
     }
+    time {font-size:1rem;}
+
   }
   
 }
 
-// Author Loop
-.loop-author {
+// Pagination
+//
+nav.pagination {
   
-  .post-title {
-    margin:0;
-    font-size:1.25em;
-    a {
-      display:block;
-      padding:1rem 0 .2rem 0;
-    }
-  }
+  .page-nav {display:inline-block;}
   
-  @media (max-width:991px) {
+}
+
+.pagination {
+  
+  &.center {
     text-align:center;
   }
-  
-  @media (max-width:767px) {
-    .single {
-      border-top:1px solid #eee;
-      margin-top:.8rem;
-    }
-  }
-  
-}
-
-// Loop Card Style
-.post-card {
-  padding: .8rem;
-  border-top:4px solid transparent;
-  .shadow-1;
-  h5 {margin-top:0;}
-  .border-radius(3px);
-
-  .post-meta {
-    border-top:2px solid #eee;
-    margin-left:-12px;
-    margin-right:-13px;
-    padding:0 15px;
-    padding-top:10px;
-  }
-
-  // Card colors by tag
-  &.tag-meta {
-    border-color: @color-meta;
-  }
-  &.tag-gaming {
-    border-color: @color-gaming;
+  &.bottom {
+    margin-top:4rem;
   }
   
 }
