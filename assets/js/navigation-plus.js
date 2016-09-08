@@ -68,20 +68,22 @@ console.log('--> navigation.js');
 
   // Open & Close Mobile Nav Functions
   //
-  function closeNav() {
+	function closeNav() {
     
     doTheHammy('close');
     TweenLite.to($mobileNav, .3, { width: 0, ease: Power1.easeOut })
     $hamburger.removeClass('active');
-
+    $('body').removeClass('overlay-active');
+    
   }
 
   function openNav() {
-
+    
     doTheHammy('open');
     TweenLite.to($mobileNav, .3, { width: 305, ease: Power1.easeOut })
     $hamburger.addClass('active');
-
+    $('body').addClass('overlay-active');
+    
   }
 
   // Hamburger Click Event
