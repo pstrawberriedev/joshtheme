@@ -10,9 +10,9 @@
     <header role="banner">
       <h1 class="post-title">{{title}}</h1>
       <section class="post-meta">
-        <time class="post-date" datetime="{{date format='MM/DD/YYYY'}}">
+        <time class="post-date" datetime="{{date format='MMMM-DD-YYYY'}}">
           <span class="icon-calendar"></span>
-          <span class="sr-only">Published On </span>{{date format="MMMM-DD-YYYY"}}
+          <span class="sr-only">Published On </span>{{date format="MM/DD/YYYY"}}
         </time>
         {{#author}}
         <a class="author" href="{{url}}"><span class="icon-user"></span> {{name}}</a>
