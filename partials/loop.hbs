@@ -3,11 +3,29 @@
     {{pagination}}
 </div>--}}
 
-{{! This is the post loop - each post will be output using this markup }}
+
 <section id="loop">
     {{#foreach posts}}
-      <article class="loop-post {{post_class}}">
-          <header class="post-header">
+      
+      {{! Meta Posts Excluded}}
+      {{#has tag="meta"}}
+        <!-- meta post excluded -->
+      {{else}}
+        <article class="loop-post {{post_class}}">
+          
+          <header class="post-header {{#if image}}has-image{{/if}}">
+              <a class="wrap" href="{{url}}"></a>
+              
+              {{#has tag="poetry"}}
+              <span class="icon-feather tag-icon"></span>
+              {{/has}}
+              {{#has tag="letters"}}
+              <span class="icon-newsletter tag-icon"></span>
+              {{/has}}
+              {{#has tag="ramblings"}}
+              <span class="icon-flag tag-icon"></span>
+              {{/has}}
+              
               <h4 class="post-title">
                 <a href="{{url}}">{{{title}}}</a>
               </h4>
@@ -17,7 +35,7 @@
                 {{excerpt words="26"}}...<a class="read-more" title="Read {{title}}" alt="Read {{title}}" href="{{url}}"><span class="typcn typcn-arrow-forward"  aria-hidden="true"></span></a>
             </p>
           </section>-->
-          <footer class="post-meta">
+          <footer class="post-footer">
             <time class="post-date" datetime="{{date published_at format='MMMM-DD'}}">
               <span class="icon-calendar"  aria-hidden="true"></span> 
               {{date published_at}}
@@ -26,16 +44,18 @@
             {{#if tags}}
             <div class="post-tag">
               {{#foreach tags}}
-              <a href="{{url}}"><span class="icon-tag"></span> {{name}}</a>
+              <a href="{{url}}"><span class="icon-price-tag"></span> {{name}}</a>
               {{/foreach}}
             </div>
             {{/if}}
           </footer>
-      </article>
+        </article>
+      {{/has}}
+      
     {{/foreach}}
 </section>
       
-{{! Previous/next page links - displayed on every page }}
+
 <div class="pagination bottom center">
   {{pagination}}
 </div>

@@ -6,7 +6,7 @@
 //
 #loop {
   
-  text-align:center;
+  text-align:left;
   margin-top:1rem;
   display:block;
   position:relative;
@@ -14,25 +14,71 @@
   //Article Wrapper
   article.loop-post {
     text-align:left;
+    position:relative;
     margin-bottom:2rem;
     display:inline-block;
     margin:1rem;
-    padding:.5rem;
+    padding:0;
     border:1px solid #eee;
+    .shadow-1;
+    .transition(box-shadow .3s ease-in-out);
+    &:hover {.shadow-2}
     
-    .post-title {
-      display:inline-block;
-      padding-bottom:.3rem;
-      .font-primary;
-    }
-    
-    // Meta
-    time, .post-tag {
-      display:inline-block;
+    // Post Header
+    // - Title & Icon
+    .post-header {
+      text-align:center;
+      padding:1.5rem 1rem 1rem 1rem;
       position:relative;
-      margin-top:.3rem;
+      display:block;
+      .background-size(cover);
+      
+      .post-title {
+        display:block;
+        position:relative;
+        .font-primary;
+      }
+      
+      a.wrap {
+        display:block;
+        position:absolute;
+        z-index:2;
+        left:0;
+        top:0;
+        bottom:0;
+        right:0;
+      }
+      
+      .tag-icon {
+        display:block;
+        position:absolute;
+        top:.3rem;
+        right:.3rem;
+      }
+      
     }
-    time {margin-right:1rem;}
+    
+    // Post Footer
+    // - Date & Tag (meta)
+    footer.post-footer {
+      
+      text-align:center;
+      padding:1rem;
+      border-top:2px solid #eee;
+      // Meta
+      time, .post-tag {
+        display:inline-block;
+        position:relative;
+        margin-top:.3rem;
+      }
+      time {
+        margin-right:1rem;
+        cursor:default;
+      }
+      
+    }
+    
+    
   }
   
   // Author Loop
