@@ -9,7 +9,6 @@
   text-align:left;
   display:block;
   position:relative;
-  width:100%;
   
   @media(max-width:767px) {
     text-align:center;
@@ -17,14 +16,12 @@
   
   //Article Wrapper
   article.loop-post {
-    width:300px;
+    width:320px;
     text-align:left;
     display:block;
     position:relative;
     border:1px solid #eee;
     .shadow-1;
-    .transition(box-shadow .3s ease-in-out);
-    &:hover {.shadow-2}
     
     // Post Header
     // - Title & Icon
@@ -96,8 +93,16 @@
 // Pagination
 //
 nav.pagination {
-  
+  text-align:center;
   .page-nav {display:inline-block;}
+
+  a {
+    display:block;
+    position:relative;
+    padding:.4rem .8rem;
+    border:1px solid #ddd;
+    margin-top:.5rem;
+  }
   
 }
 
