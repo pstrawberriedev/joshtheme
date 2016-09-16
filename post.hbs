@@ -57,5 +57,43 @@
       </div>
     </article>
 
+    {{! Next & Prev Posts}}
+    <div class="post-footer-single">
+
+      {{#prev_post}}
+        <div class="loop-post prev">
+          <div class="post-header {{#if image}}has-image{{/if}}">
+
+              <a class="wrap" href="{{url}}"></a>
+              <h4 class="post-title">
+                &nbsp;&laquo;&nbsp; <span>{{title}}</span>
+              </h4>
+
+          </div>
+        </div>
+      {{/prev_post}}
+      
+      <a class="return" href="/">Return to front</a>
+      {{#foreach tags}}
+        <a class="return tag" href="{{url}}">Go to {{name}}</a>
+      {{/foreach}}
+      
+      {{#next_post}}
+        <div class="loop-post next">
+          <div class="post-header {{#if image}}has-image{{/if}}">
+
+              <a class="wrap" href="{{url}}"></a>
+              <h4 class="post-title">
+                <span>{{title}}</span> &nbsp;&nbsp;&raquo;
+              </h4>
+
+          </div>
+        </div>
+      {{/next_post}}
+
+    </div>
+
   {{/post}}
+  
+        
 </section>
