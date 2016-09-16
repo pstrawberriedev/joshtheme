@@ -1,0 +1,32 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! info }}
+{{!@blog.title}}
+{{!@blog.description}}
+{{!@blog.url}}
+
+{{! images }}
+{{!@blog.cover}}
+{{!@blog.logo}}
+
+{{! check for nav }}
+{{!if @blog.navigation}}{{!/if}}
+
+{{! The big featured header }}
+
+{{!-- 
+<header role="banner">
+  <h1>blaAaarg!</h1>
+</header>
+--}}
+
+<section id="home" class="container-content huge" role="main">
+  <!--
+    <img class="title-image no-title" src="/assets/images/pudgehook.png" alt="pudge throwing a hook" />
+    <h2 >Fresh meat</h2> -->
+  
+    {{> "loop"}}
+
+
+</section>
