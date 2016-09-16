@@ -64,28 +64,32 @@
         <div class="loop-post prev">
           <div class="post-header {{#if image}}has-image{{/if}}">
 
-              <a class="wrap" href="{{url}}"></a>
-              <h4 class="post-title">
-                &nbsp;&laquo;&nbsp; <span>{{title}}</span>
-              </h4>
+              <a href="{{url}}">
+                <h4 class="post-title">
+                  &nbsp;&lsaquo;&nbsp; <span>{{title}}</span>
+                </h4>
+              </a>
 
           </div>
         </div>
       {{/prev_post}}
       
-      <a class="return" href="/">Return to front</a>
-      {{#foreach tags}}
-        <a class="return tag" href="{{url}}">Go to {{name}}</a>
-      {{/foreach}}
+      <div class="middle">
+        <a class="return" href="/">Return to front</a><br />
+        {{#foreach tags}}
+          <a class="return tag" href="{{url}}">Go to {{name}}</a>
+        {{/foreach}}
+      </div>
       
       {{#next_post}}
         <div class="loop-post next">
           <div class="post-header {{#if image}}has-image{{/if}}">
 
-              <a class="wrap" href="{{url}}"></a>
-              <h4 class="post-title">
-                <span>{{title}}</span> &nbsp;&nbsp;&raquo;
-              </h4>
+              <a href="{{url}}">
+                <h4 class="post-title">
+                  <span>{{title}}</span> &nbsp;&nbsp;&rsaquo;
+                </h4>
+              </a>
 
           </div>
         </div>

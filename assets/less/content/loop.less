@@ -93,15 +93,16 @@
 //
 .post-footer-single {
   width:100%;
-  display:block;
+  display:table;
   position:relative;
-  .clearfix;
   margin-top:3rem;
-  height:70px;
   
   .loop-post {
     .shadow-off;
     border:0;
+    display:table-cell;
+    vertical-align:middle;
+    width:40%;
     
     h4 {
       font-size:1rem;
@@ -109,36 +110,36 @@
     }
     &.prev {
       h4{text-align:left;}
-      float:left;
       margin-left:1.5rem;
     }
     &.next {
       h4{text-align:right;}
-      float:right;
       margin-right:1.5rem;
     }
     @media(max-width:1024px) {
-      display:none;
+      h4 {
+        font-size:3rem;
+        span {display:none;}
+      }
     }
   }
   
+  .middle {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    width:20%;
+  }
   .return {
-    position:absolute;
     display:inline-block;
-    left:0;
-    right:0;
-    bottom:0;
     width:200px;
-    margin:0 auto;
     font-size:.9rem;
     padding:.3rem 0 .4rem 0;
     text-align:center;
     border:1px solid #eee;
     background:#f9f9f9;
-    &.tag {
-      top:0;
-      bottom:auto;
-    }
+    margin-bottom:.4rem;
+    @media(max-width:1024px) {width:150px;}
   }
   
 }
