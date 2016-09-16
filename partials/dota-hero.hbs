@@ -1,0 +1,69 @@
+{{!-- Previous/next page links - only displayed on page 2+ 
+<div class="pagination top">
+    {{pagination}}
+</div>--}}
+<!--<section class="post-excerpt">
+  <p>
+    {{excerpt words="26"}}...
+     <a class="read-more" title="Read {{title}}" alt="Read {{title}}" href="{{url}}">
+      <span class="typcn typcn-arrow-forward"  aria-hidden="true"></span>
+    </a>
+  </p>
+</section>-->
+
+
+<section id="loop">
+
+      {{#foreach posts}}
+      
+        <article class="loop-post {{post_class}}">
+          <header class="post-header {{#if image}}has-image{{/if}}">
+
+              <a class="wrap" href="{{url}}"></a>
+
+              {{#has tag="poetry"}}
+                <span class="icon-feather tag-icon"></span>
+              {{/has}}
+
+              {{#has tag="letters"}}
+                <span class="icon-newsletter tag-icon"></span>
+              {{/has}}
+
+              {{#has tag="ramblings"}}
+                <span class="icon-megaphone tag-icon"></span>
+              {{/has}}
+
+              {{#has tag="meta"}}
+                <span class="icon-infinity tag-icon"></span>
+              {{/has}}
+
+              <h4 class="post-title">
+                <a href="{{url}}">{{{title}}}</a>
+              </h4>
+
+          </header>
+
+          <footer class="post-footer">
+            <time class="post-date" datetime="{{date published_at format='MM/DD/YY'}}">
+              <span class="icon-calendar"  aria-hidden="true"></span> 
+              {{date published_at format='MM/DD/YY'}}
+              {{!-- {{date published_at timeago="true"}} --}}
+            </time>
+            {{#if tags}}
+            <div class="post-tag">
+              {{#foreach tags}}
+              <a href="{{url}}"><span class="icon-price-tag"></span> {{name}}</a>
+              {{/foreach}}
+            </div>
+            {{/if}}
+          </footer>
+        </article>
+        
+      {{/foreach}}
+
+</section>
+      
+
+<div class="pagination bottom center">
+  {{pagination}}
+</div>
