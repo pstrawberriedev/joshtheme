@@ -1,0 +1,203 @@
+/*
+  DoTA 2
+*/
+
+#dota2 {
+  
+  //minimap
+  #mini {
+    position:fixed;
+    display:block;
+    top:.7rem;
+    right:.8rem;
+    z-index:2600;
+    width: 2.5rem; 
+    height: 2.5rem;
+    cursor:pointer;
+    .background-size(contain);
+      img {.border-radius(2px);}
+  }
+
+  // Hero Guide
+  .hero-guide {
+    border:1px dotted #ccc;
+    padding-top:.8rem;
+    padding-bottom:.8rem;
+    
+    // Intro
+    .hero-intro {
+      margin-bottom:1.2rem;
+      border-bottom:1px dotted #ccc;
+      
+      .hero-title {
+        margin-top:.69rem;
+        display:block;
+        position:relative;
+        margin-bottom:.8rem;
+        
+        h2 {
+          position:relative;
+          display:table;
+          margin-bottom:.4rem;
+          margin-top:-1rem;
+          padding-left:30px;
+          font-size:1.4rem;
+          font-weight:600;
+          text-align:center;
+          overflow:visible;
+        }
+        &.strength {
+          h2 {
+            &:before {
+              content:"";
+              position:absolute;
+              width:30px;
+              height:30px;
+              left:-6px;
+              top:-1px;
+              .background-size(contain);
+              background-image: url('http://static.ponie.club/dota2/images/spells/_strength.png');
+            }
+          }
+        }
+        &.agility {
+          h2 {
+            &:before {
+              content:"";
+              position:absolute;
+              width:30px;
+              height:30px;
+              left:-6px;
+              top:-1px;
+              .background-size(contain);
+              background-image: url('http://static.ponie.club/dota2/images/spells/_agility.png');
+            }
+          }
+        }
+        &.intelligence {
+          h2 {
+            &:before {
+              content:"";
+              position:absolute;
+              width:30px;
+              height:30px;
+              left:-6px;
+              top:-1px;
+              .background-size(contain);
+              background-image: url('http://static.ponie.club/dota2/images/spells/_intelligence.png');
+            }
+          }
+        }
+        
+        img { 
+          display:block; 
+        }
+      }//end .hero-title
+      
+      .hero-summary {
+       
+        blockquote {
+          margin-bottom: .9rem;
+        }
+        @media(max-width:767px) {
+          padding-left:0;
+        }
+        
+      }//end .hero-summary
+      
+      .hero-skills {
+        margin-bottom:.5rem;
+        margin-left:.8rem;
+        
+        .skill {
+          width:42px;
+          height:42px;
+          display:inline-block;
+          position:relative;
+          margin-right:.6rem;
+          &:last-child {margin-right:0;}
+          
+          &.q:before,&.w:before,&.e:before,&.r:before {
+              content:"Q";
+              position:absolute;
+              display:block;
+              z-index:2;
+              top:0;
+              left:0;
+              font-size:.7rem;
+              padding:.15rem;
+              background:rgba(0,0,0,.65);
+              color:@color-light;
+          }
+          &.w:before { content:"W" }
+          &.e:before { content:"E" }
+          &.r:before { content:"R" }
+        }
+        
+        img {
+          max-width:100%;
+          height:auto;
+        }
+        
+      }//end .hero-skills
+      
+    }//end .hero-intro
+    
+    // Builds
+    .hero-build {
+      
+      .hero-items {
+        margin-bottom:1.2rem;
+      }
+      h5 {
+        display:block;
+        margin-bottom:.4rem;
+      }
+      .item {
+        display:inline-block;
+        position:relative;
+        width:62px;
+        margin-right:-1rem;
+        &:first-child { margin-right:1; }
+          &.multiple {}
+      }
+
+    }
+    // Builds
+    .hero-build {
+      
+      .hero-items {
+        margin-bottom:1.2rem;
+      }
+      h5 { 
+        display:block;
+        margin-bottom:.4rem;
+      }
+      .item {
+        display:inline-block;
+        position:relative;
+        width:62px;
+        margin-right:-1rem;
+        overflow:visible;
+          &:first-child { margin-right:1; }
+          .multiple {
+            position:absolute;
+            top:-.4rem;
+            right:.7rem;
+            padding:.2rem .25rem;
+            z-index:3;
+            content:"";
+            background:rgba(0,0,0,.85);
+            color:@color-light;
+            font-size:.63rem;
+            .border-radius(50%);
+            .shadow-1;
+          }
+      }
+
+    }//end .hero-build
+    
+    
+  }//end .hero-guide
+  
+}//end #dota2

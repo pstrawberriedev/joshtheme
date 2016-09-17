@@ -1,0 +1,101 @@
+{{!< default}}
+
+{{#post}}
+  <section id="dota2" class="page-post {{post_class}}">
+
+    <header role="banner">
+      <h1 class="post-title">Dota 2 Hero Reference</h1>
+    </header>
+
+    <a id="mini" tabindex="0">
+      <img src="http://static.ponie.club/dota2/images/map/minimap.jpg" />
+    </a>
+
+    {{! Pudge Mid }}
+    <section class="container hero-guide">
+      <div class="row hero-intro">
+
+        {{! Name, Picture }}
+        <div class="col-sm-3 hero-title strength">
+          <h2>Pudge</h2>
+          <img src="http://static.ponie.club/dota2/images/heroes/pudge.png" />
+        </div>
+
+        {{! Intro }}
+        <div class="col-sm-9 hero-summary">
+          <blockquote>
+            Pudge is a potent roam pick, as well as an effective support laner.
+          </blockquote>
+          <div class="hero-skills">
+            <div class="skill q">
+              <img data-dota2-skill="pudge_meat_hook" src="http://static.ponie.club/dota2/images/spells/pudge_meat_hook.png" />
+            </div>
+            <div class="skill w">
+              <img data-dota2-skill="pudge_rot" src="http://static.ponie.club/dota2/images/spells/pudge_rot.png" />
+            </div>
+            <div class="skill e">
+              <img data-dota2-skill="pudge_flesh_heap" src="http://static.ponie.club/dota2/images/spells/pudge_flesh_heap.png" />
+            </div>
+            <div class="skill r">
+              <img data-dota2-skill="pudge_dismember" src="http://static.ponie.club/dota2/images/spells/pudge_dismember.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{! Items }}
+      <div class="row hero-build">
+        <section class="col-sm-3 hero-items">
+          <h5>First Buy</h5>
+          {{! Tango}}
+          <div class="item">
+            <img data-dota2-item="tango" src="http://static.ponie.club/dota2/images/items/tango.png" />
+          </div>
+          {{! Health Salve}}
+          <div class="item">
+            <span class="multiple">x2</span>
+            <img data-dota2-item="tango" src="http://static.ponie.club/dota2/images/items/salve.png" />
+          </div>
+        </section>
+        <section class="col-sm-3 hero-items">
+          <h5>Stable 15min</h5>
+          {{! Bottle}}
+          <div class="item">
+            <img data-dota2-item="tango" src="http://static.ponie.club/dota2/images/items/bottle.png" />
+          </div>
+          {{! Boots}}
+          <div class="item">
+            <img data-dota2-item="tango" src="http://static.ponie.club/dota2/images/items/boots.png" />
+          </div>
+        </section>
+        <section class="col-sm-3 hero-items">
+          <h5>Behind 15min</h5>
+          {{! Bottle}}
+          <div class="item">
+            <img data-dota2-item="tango" src="http://static.ponie.club/dota2/images/items/bottle.png" />
+          </div>
+          {{! Boots}}
+          <div class="item">
+            <img data-dota2-item="tango" src="http://static.ponie.club/dota2/images/items/boots.png" />
+          </div>
+        </section>
+      </div>
+      <div class="row">
+        <section class="col-sm-4 hero-items">
+          <h5>Core</h5>
+
+        </section>
+        <section class="col-sm-4 hero-items">
+          <h5>Vs. Physical</h5>
+
+        </section>
+        <section class="col-sm-4 hero-items">
+          <h5>Vs. Magic</h5>
+
+        </section>
+      </div>
+
+    </section>
+
+  </section>
+{{/post}}
