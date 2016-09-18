@@ -1,0 +1,107 @@
+/*
+  DoTA 2 Item Popups
+*/
+
+.dota2-item-info {
+  
+  background:#111;
+  color:@color-light;
+  padding:.8rem;
+  font-size:80%;
+  max-width:320px;
+  
+  //Intro
+  .item-intro {
+    display:block;
+    position:relative;
+    margin-bottom:.8rem;
+    .clearfix;
+    
+    img {
+      float:left;
+      display:block;
+      width:124px;
+      height:64px;
+      margin-right:.3rem;
+    }
+    
+    .intro-title {
+      float:left;
+      display:block;
+      height:64px;
+      margin-left:-30px;
+        span {
+          display:block;
+          margin-bottom:4px;
+          font-size:1rem;
+          font-weight:600;
+          &.cost {
+            color:@color-dota2-gold;
+            font-size:.9rem;
+            height:17px;
+            background-size:25px 17px;
+            background:transparent url('http://static.ponie.club/dota2/images/items/_gold.png') no-repeat;
+            background-position:0 1px;
+            display:inline-block;
+            margin-right:4px;
+            padding-left:30px;
+            margin-bottom:0;
+          }
+        }
+    }
+  }
+  
+  //Description & Effects
+  .item-description, .item-effect, .item-cd {
+    p {
+      color:@color-light-darker;
+      margin-bottom:.5rem;
+    }
+  }
+  
+  .item-description {
+    span {color:@color-light;}
+  }
+  
+  .item-effect {
+    margin-bottom:.8rem;
+    p {margin-bottom:0}
+  }
+  
+  .item-cd {
+    margin-bottom:0;
+    p {
+      padding-left:22px;
+      position:relative;
+      display:inline-block;
+      overflow:hidden;
+      color:@color-light;
+      margin-bottom:0;
+        &.cd {
+        margin-right:1rem;
+        &:before {
+          font-family:"Entypo";
+          content:"\e975";
+          position:absolute;
+          left:0;
+          top:-3px;
+          font-size:1.1rem;
+        }
+      }
+      &.mana {
+        &:before {
+          content:"";
+          position:absolute;
+          width:16px;
+          height:16px;
+          background:@color-dota2-mana;
+          left:0;
+          top:0;
+          font-size:1.1rem;
+          .border-radius(8px);
+        }
+      }
+    }
+  }
+  
+}//end #dota2
