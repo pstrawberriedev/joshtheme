@@ -15,7 +15,6 @@
 <section id="loop">
 
       {{#foreach posts}}
-      {{#has tag="meta"}}{{else}}{{! Hiding the 'meta' tagged posts from the loop}}
        
         <article class="loop-post {{post_class}}">
           <header class="post-header {{#if image}}has-image{{/if}}">
@@ -59,8 +58,7 @@
             {{/if}}
           </footer>
         </article>
-        
-      {{/has}}
+  
       {{/foreach}}
 
 </section>
