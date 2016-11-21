@@ -1,4 +1,4 @@
-{{!-- Previous/next page links - only displayed on page 2+ 
+{{!-- Previous/next page links - only displayed on page 2+
 <div class="pagination top">
     {{pagination}}
 </div>--}}
@@ -15,11 +15,15 @@
 <section id="loop">
 
       {{#foreach posts}}
-       
+
         <article class="loop-post {{post_class}}">
           <header class="post-header {{#if image}}has-image{{/if}}">
 
               <a class="wrap" href="{{url}}"></a>
+
+              {{#has tag="code"}}
+                <span class="icon-code tag-code"></span>
+              {{/has}}
 
               {{#has tag="poetry"}}
                 <span class="icon-feather tag-icon"></span>
@@ -36,7 +40,7 @@
               {{#has tag="meta"}}
                 <span class="icon-infinity tag-icon"></span>
               {{/has}}
-              
+
               {{#has tag="fsafp"}}
                 <span class="icon-fingerprint tag-icon"></span>
               {{/has}}
@@ -49,7 +53,7 @@
 
           <footer class="post-footer">
             <time class="post-date" datetime="{{date published_at format='MM/DD/YY'}}">
-              <span class="icon-calendar"  aria-hidden="true"></span> 
+              <span class="icon-calendar"  aria-hidden="true"></span>
               {{date published_at format='MM/DD/YY'}}
               {{!-- {{date published_at timeago="true"}} --}}
             </time>
@@ -62,11 +66,11 @@
             {{/if}}
           </footer>
         </article>
-  
+
       {{/foreach}}
 
 </section>
-      
+
 
 <div class="pagination bottom center">
   {{pagination}}
